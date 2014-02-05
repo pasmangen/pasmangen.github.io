@@ -1,6 +1,7 @@
 var GENERATED_PASSWORD_LENGTH = 32;
 
 $(document).ready(function() {
+  $('#genpass').css('display', 'none');
 
   $('#generate').click(function(){
 
@@ -25,6 +26,8 @@ $(document).ready(function() {
       var generatedPassword = dataMd5.substr(0, GENERATED_PASSWORD_LENGTH);
       console.log('generatedPassword='+generatedPassword);
 
-      $('#genpass').text(generatedPassword);
+      $('#genpass')
+        .text(generatedPassword)
+        .toggle();
   });
 });
