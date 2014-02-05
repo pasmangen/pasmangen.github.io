@@ -1,4 +1,38 @@
-var GENERATED_PASSWORD_LENGTH = 32;
+var GENERATED_PASSWORD_LENGTH = 12; // max 32
+
+var sumCharCode = function(str) {
+    
+    var s = 0;
+    for(i=0; i<str.length; i++) {
+        s += str.charCodeAt(i);
+    }
+    return s;
+}
+
+var calculateCoordenates = function() {
+
+    var account = $('#account').val();
+    console.log('account='+account);
+    
+    var user = $('#user').val();
+    console.log('user='+user);
+    
+    var data = account+user;
+    console.log('data='+data);
+    
+    var dataCode = sumCharCode(data);
+    console.log('dataCode='+dataCode);
+    
+    var coordenate = dataCode%60;
+    console.log('coordenate='+coordenate);
+    
+    $('#calculateCoordenates').slideUp('slow', function() {
+        $('#generatePassword').slideDown('slow');
+    });
+    
+    
+    $('#codeLabel').html('Code of cell <strong>'+coordenate+'</strong>:');
+};
 
 var generatePassword = function() {
 
@@ -26,11 +60,13 @@ var generatePassword = function() {
     $('#genpass')
       .text(generatedPassword)
       .toggle();
-  };
+};
 
 // Document OnLoad
 $(function() {
 
-  $('#generate').on('click', generatePassword);
+    $('#generatePassword').hide();
 
+    $('#generate').on('click', generatePassword);
+    $('#coordenates').on('click', calculateCoordenates);
 });

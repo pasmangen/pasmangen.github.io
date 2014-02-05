@@ -21,7 +21,7 @@
     </header>
 
     <section class="main">
-        <form action="#">
+        <form id="calculateCoordenates">
             <fieldset>
                 <label for="account">Account Name:</label>
                 <input type="text" name="account" id="account" placeholder="Enter the account name" required/>
@@ -31,17 +31,16 @@
                 <input type="text" name="user" id="user" placeholder="Enter the user name" required/>
             </fieldset>
             <fieldset>
-                <!--<input type="button" id="coordenate" value="Calculate Coordenate" />-->
-                <a class="btn" href="#" id="coordenate">
+                <a class="btn" href="#" id="coordenates">
                     <span class="icon-credit-card"></span>
                     Calculate Coordenate
                 </a>
             </fieldset>
         </form>
 
-        <form action="#">
+        <form id="generatePassword">
             <fieldset>
-                <label for="code">Card Code:</label>
+                <label id="codeLabel" for="code">Card Code:&nbsp;</label>
                 <input type="text" name="code" id="code" placeholder="Enter the card code" required/>
             </fieldset>
             <fieldset>
@@ -49,7 +48,6 @@
                 <input type="password" name="password" id="password" required/>
             </fieldset>
             <fieldset>
-                <!--<input type="button" id="generate" value="Generate Password" />-->
                 <a class="btn" href='#' id="generate">
                     <span class='icon-key'></span>Generate Password
                 </a>
