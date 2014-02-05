@@ -61,4 +61,4 @@ footer{color:#aaa;font-size:.8em;text-align:center}
 .main fieldset input[type='text']:focus,.main fieldset input[type='password']:focus{border:1px solid #ffa500;color:#333;outline:0}
 .main fieldset .btn{background:#00a352;border:0;border-bottom:4px solid #008534;border-radius:5px;color:#eaeaea;display:inline-block;padding:.75em;text-decoration:none;width:250px;}
 .main fieldset .btn span{margin:0 .7em}
-.main fieldset p#genpass{background:#baf2d6;border:1px solid #9cd4b8;border-radius:5px;padding:.5em}
+.main fieldset p#genpass{background:#baf2d6;border:1px solid #9cd4b8;border-radius:5px;display:none;padding:.5em}

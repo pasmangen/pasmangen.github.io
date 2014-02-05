@@ -1,33 +1,36 @@
 var GENERATED_PASSWORD_LENGTH = 32;
 
-$(document).ready(function() {
-  $('#genpass').css('display', 'none');
+var generatePassword = function() {
 
-  $('#generate').click(function(){
+    var account = $('#account').val();
+    console.log('account='+account);
 
-      var account = $('#account').val();
-      console.log('account='+account);
+    var user = $('#user').val();
+    console.log('user='+user);
 
-      var user = $('#user').val();
-      console.log('user='+user);
+    var password = $('#password').val();
+    console.log('password='+password);
 
-      var password = $('#password').val();
-      console.log('password='+password);
+    var code = $('#code').val();
+    console.log('code='+code);
 
-      var code = $('#code').val();
-      console.log('code='+code);
+    var data = account+user+password+code;
+    console.log('data='+data);
 
-      var data = account+user+password+code;
-      console.log('data='+data);
+    var dataMd5 = md5(data);
+    console.log('dataMd5='+dataMd5);
 
-      var dataMd5 = md5(data);
-      console.log('dataMd5='+dataMd5);
+    var generatedPassword = dataMd5.substr(0, GENERATED_PASSWORD_LENGTH);
+    console.log('generatedPassword='+generatedPassword);
 
-      var generatedPassword = dataMd5.substr(0, GENERATED_PASSWORD_LENGTH);
-      console.log('generatedPassword='+generatedPassword);
+    $('#genpass')
+      .text(generatedPassword)
+      .toggle();
+  };
 
-      $('#genpass')
-        .text(generatedPassword)
-        .toggle();
-  });
+// Document OnLoad
+$(function() {
+
+  $('#generate').on('click', generatePassword);
+
 });
