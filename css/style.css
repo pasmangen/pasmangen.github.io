@@ -58,6 +58,6 @@ footer{color:#aaa;font-size:.8em;text-align:center}
 .main fieldset label{font-weight:bold}
 .main fieldset input{border-radius:5px;box-sizing:border-box;padding:.75em;outline:0}
 .main fieldset input[type='text'],.main fieldset input[type='password']{border:1px solid #ccc;box-shadow:0 0 10px rgba(204,204,204,0.5) inset;color:#ccc;transition:.3s border-color;}
-.main fieldset input[type='text']:focus,.main fieldset input[type='password']:focus{border:1px solid #ffa500;outline:0}
+.main fieldset input[type='text']:focus,.main fieldset input[type='password']:focus{border:1px solid #ffa500;color:#333;outline:0}
 .main fieldset .btn{background:#00a352;border:0;border-bottom:4px solid #008534;border-radius:5px;color:#eaeaea;display:inline-block;padding:.75em;text-decoration:none;width:250px;}
 .main fieldset .btn span{margin:0 .7em}
