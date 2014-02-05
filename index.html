@@ -20,8 +20,8 @@
         <h2>The easy way to generate your passwords</h2>
     </header>
 
-    <section class="main">
-        <form id="calculateCoordenates">
+    <section class="main" id="calculateCoordenates">
+        <form>
             <fieldset>
                 <label for="account">Account Name:</label>
                 <input type="text" name="account" id="account" placeholder="Enter the account name" required/>
@@ -37,8 +37,10 @@
                 </a>
             </fieldset>
         </form>
+    </section>
 
-        <form id="generatePassword">
+    <section class="main" id="generatePassword">
+        <form>
             <fieldset>
                 <label id="codeLabel" for="code">Card Code:&nbsp;</label>
                 <input type="text" name="code" id="code" placeholder="Enter the card code" required/>
@@ -52,9 +54,16 @@
                     <span class='icon-key'></span>Generate Password
                 </a>
             </fieldset>
+        </form>
+    </section>
+    
+    <section class="main" id="viewPassword">
+        <form>
             <fieldset>
                 <label for="code">Generated Password:</label>
-                <p id="genpass"></p>
+            </fieldset>
+            <fieldset>
+                <a class="btn" id="genpass"></a>
             </fieldset>
         </form>
     </section>

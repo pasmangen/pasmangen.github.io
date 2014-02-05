@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PMG - Password Manager Generator</title>
+    <meta name="description" content="Password Manager Generator">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/style.css"/>
+
+    <script src='lib/modernizr/modernizr-2.7.1.min.js'></script>
+</head>
+<body>
+<!--[if lt IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+    <header>
+        <h1>PMG<br/>Password Manager Generator</h1>
+        <h2>The easy way to generate your passwords</h2>
+    </header>
+
+    <section class="main" id="generateCodesCard">
+        <form>
+            <fieldset>
+                <label for="birthplace">Birthplace:</label>
+                <input type="text" name="birthplace" id="birthplace"
+                    placeholder="Enter your Birthplace" required/>
+            </fieldset>
+            <fieldset>
+                <label for="childhoodFriend">Best Childhood Friend:</label>
+                <input type="text" name="childhoodFriend" id="childhoodFriend"
+                    placeholder="Enter your Best Childhood Friend's Name" required/>
+            </fieldset>
+            <fieldset>
+                <label for="schoolName">Primary School Name:</label>
+                <input type="text" name="schoolName" id="schoolName"
+                    placeholder="Enter your Primary School Name" required/>
+            </fieldset>
+            <fieldset>
+                <label for="driverLicense">Driving License Number:</label>
+                <input type="text" name="driverLicense" id="driverLicense"
+                    placeholder="Enter your Driving License Number (blank if not)" required/>
+            </fieldset>
+            <fieldset>
+                <a class="btn" href="#" id="generate">
+                    <span class="icon-credit-card"></span>
+                    Generate Codes Card
+                </a>
+            </fieldset>
+        </form>
+    </section>
+
+    <section class="main" id="viewCodesCard">
+    </section>
+
+    <footer>
+        <p>&copy; 2014 - Hackalovers Team</p>
+    </footer>
+
+    <script src='//localhost:35729/livereload.js'></script>
+    <script src="./lib/jquery/jquery-2.1.0.min.js"></script>
+    <script src="./lib/phpjs/md5.pack.js"></script>
+    <script src="./js/card.js"></script>
+</body>
+</html>

@@ -18,6 +18,7 @@ var calculateCoordenates = function() {
     console.log('user='+user);
     
     var data = account+user;
+    data = data.toLocaleLowerCase();
     console.log('data='+data);
     
     var dataCode = sumCharCode(data);
@@ -30,8 +31,7 @@ var calculateCoordenates = function() {
         $('#generatePassword').slideDown('slow');
     });
     
-    
-    $('#codeLabel').html('Code of cell <strong>'+coordenate+'</strong>:');
+    $('#codeLabel').html('Code of cell <strong>['+coordenate+']</strong>:');
 };
 
 var generatePassword = function() {
@@ -49,6 +49,7 @@ var generatePassword = function() {
     console.log('code='+code);
 
     var data = account+user+password+code;
+    data = data.toLocaleLowerCase();
     console.log('data='+data);
 
     var dataMd5 = md5(data);
@@ -56,17 +57,21 @@ var generatePassword = function() {
 
     var generatedPassword = dataMd5.substr(0, GENERATED_PASSWORD_LENGTH);
     console.log('generatedPassword='+generatedPassword);
+    
+    $('#generatePassword').slideUp('slow', function() {
+        $('#viewPassword').slideDown('slow');
+    });
 
     $('#genpass')
-      .text(generatedPassword)
-      .toggle();
+      .text(generatedPassword);
 };
 
 // Document OnLoad
 $(function() {
 
     $('#generatePassword').hide();
+    $('#viewPassword').hide();
 
-    $('#generate').on('click', generatePassword);
     $('#coordenates').on('click', calculateCoordenates);
+    $('#generate').on('click', generatePassword);
 });
