@@ -1,0 +1,22 @@
+{
+  "name": "pasmangen.github.io",
+  "version": "0.0.0",
+  "description": "Password Manager Generator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pasmangen/pasmangen.github.io.git"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-cli": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-stylus": "*",
+    "grunt-contrib-uglify": "*"
+  },
+  "author": "HackathonLovers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pasmangen/pasmangen.github.io/issues"
+  },
+  "homepage": "https://github.com/pasmangen/pasmangen.github.io"
+}
