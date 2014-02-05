@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>PMG - Passworg Manager Generator</title>
     <script type="text/javascript" src="./lib/jquery/jquery-2.1.0.min.js"></script>
-    <script type="text/javascript" src="./lib/phpjs/md5.js"></script>
-    <script type="text/javascript" src="./js/generate.js"></script>
+    <script type="text/javascript" src="./lib/phpjs/md5.pack.js"></script>
+    <script type="text/javascript" src="./js/pmg.js"></script>
 </head>
 <body>
+    <h1>PMG - Passworg Manager Generator</h1>
     <form action="#">
         <fieldset>
             <label for="account">Account Name:</label>
@@ -23,10 +24,10 @@
         </fieldset>
         <fieldset>
             <label for="code">Card Code:</label>
-            <input type="text" name="code" id="code" value="enter the card code">
+            <input type="text" name="code" id="code" value="enter the card code" />
         </fieldset>
         <fieldset>
-            <button ig="generate">Generate Password</button>
+            <input type="button" id="generate" value="Generate Password" />
         </fieldset>
         <fieldset>
             <label for="code">Generated Password:</label>
