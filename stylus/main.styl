@@ -1,4 +1,5 @@
 @import 'normalize'
+@import 'fonts'
 
 body
 	background #fafafa
@@ -6,7 +7,9 @@ body
 	font-size 16px
 
 header
-	background #333
+	background url('http://techchurian.files.wordpress.com/2013/07/hackers_security_password-100004008-orig1.jpg') #333
+	background-size cover
+	border-bottom 3px solid #00A352
 	color #eaeaea
 	padding 0.5em
 	text-align center
@@ -17,16 +20,54 @@ header
 		font-style italic
 		font-size 1.1em
 
-.main
-	margin 1em 
+footer
+	color #aaa
+	font-size .8em
 	text-align center
+	
+
+.main
+	margin .5em 
+	text-align center
+
+	form
+		border-bottom 1px dashed #ccc
+		margin 2em 0
 	
 	fieldset
 		border 0
 		label, input
 			display inline-block
-			width 200px
+			width 250px
+		label
+			font-weight bold
 
 		input
 			border-radius 5px
+			box-sizing border-box
+			padding .75em
+			outline 0
+
+		input[type='text'], input[type='password']
+			border 1px solid #ccc
+			box-shadow 0 0 10px rgba(204,204,204,0.5) inset
+			color #ccc
+			transition .3s border-color
+			&:focus
+				border 1px solid orange
+				outline 0
+
+		.btn
+			background #00A352
+			border 0
+			border-bottom 4px solid #00A352 - 30
+			border-radius 5px
+			color #eaeaea
+			display inline-block
+			padding .75em
+			text-decoration none
+			width 250px
+			span
+				margin 0 .7em
+			
 

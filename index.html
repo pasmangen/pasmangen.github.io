@@ -24,28 +24,35 @@
         <form action="#">
             <fieldset>
                 <label for="account">Account Name:</label>
-                <input type="text" name="account" id="account" value="enter the account name" />
+                <input type="text" name="account" id="account" placeholder="Enter the account name" required/>
             </fieldset>
             <fieldset>
                 <label for="user">User Name:</label>
-                <input type="text" name="user" id="user" value="enter the user name" />
+                <input type="text" name="user" id="user" placeholder="Enter the user name" required/>
             </fieldset>
             <fieldset>
-                <input type="button" id="coordenate" value="Calculate Coordenate" />
+                <!--<input type="button" id="coordenate" value="Calculate Coordenate" />-->
+                <a class="btn" href="#" id="coordenate">
+                    <span class="icon-credit-card"></span>
+                    Calculate Coordenate
+                </a>
             </fieldset>
         </form>
 
         <form action="#">
             <fieldset>
                 <label for="code">Card Code:</label>
-                <input type="text" name="code" id="code" value="enter the card code" />
+                <input type="text" name="code" id="code" placeholder="Enter the card code" required/>
             </fieldset>
             <fieldset>
                 <label for="password">Master Password:</label>
-                <input type="password" name="password" id="password" />
+                <input type="password" name="password" id="password" required/>
             </fieldset>
             <fieldset>
-                <input type="button" id="generate" value="Generate Password" />
+                <!--<input type="button" id="generate" value="Generate Password" />-->
+                <a class="btn" href='#' id="generate">
+                    <span class='icon-key'></span>Generate Password
+                </a>
             </fieldset>
             <fieldset>
                 <label for="code">Generated Password:</label>
@@ -53,6 +60,10 @@
             </fieldset>
         </form>
     </section>
+
+    <footer>
+        <p>&copy; 2014 - Hackalovers Team</p>
+    </footer>
 
     <script src='//localhost:35729/livereload.js'></script>
     <script src="./lib/jquery/jquery-2.1.0.min.js"></script>
