@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PMG - Passworg Manager Generator</title>
+    <script type="text/javascript" src="./lib/jquery/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="./lib/phpjs/md5.js"></script>
+    <script type="text/javascript" src="./js/generate.js"></script>
+</head>
+<body>
+    <form action="#">
+        <fieldset>
+            <label for="account">Account Name:</label>
+            <input type="text" name="account" id="account" value="enter the account name" />
+        </fieldset>
+        <fieldset>
+            <label for="user">User Name:</label>
+            <input type="text" name="user" id="user" value="enter the user name" />
+        </fieldset>
+        <fieldset>
+            <label for="password">Master Password:</label>
+            <input type="password" name="password" id="password" />
+        </fieldset>
+        <fieldset>
+            <label for="code">Card Code:</label>
+            <input type="text" name="code" id="code" value="enter the card code">
+        </fieldset>
+        <fieldset>
+            <button ig="generate">Generate Password</button>
+        </fieldset>
+        <fieldset>
+            <label for="code">Generated Password:</label>
+            <p id="genpass"></p>
+        </fieldset>
+    </form>
+</body>
+</html>

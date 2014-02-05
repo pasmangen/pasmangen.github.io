@@ -1,0 +1,173 @@
+<?xml version="1.0" ?>
+<fotowall version="0.9" format="2">
+  <canvas>
+    <meta>
+      <filepath>/home/adolfo/hackathon/password-manager-generator/icons/sysadmins.fotowall</filepath>
+    </meta>
+    <mode>
+      <id>0</id>
+    </mode>
+    <background>
+      <mode>0</mode>
+      <back-properties ratio="2"/>
+      <title></title>
+      <background-color>
+        <top>
+          <red>192</red>
+          <green>192</green>
+          <blue>192</blue>
+        </top>
+        <bottom>
+          <red>80</red>
+          <green>80</green>
+          <blue>80</blue>
+        </bottom>
+      </background-color>
+      <title-color>
+        <red>255</red>
+        <green>0</green>
+        <blue>0</blue>
+      </title-color>
+      <foreground-color>
+        <red>128</red>
+        <green>128</green>
+        <blue>128</blue>
+      </foreground-color>
+    </background>
+    <content>
+      <picture>
+        <rect>
+          <x>-100</x>
+          <y>-100</y>
+          <w>200</w>
+          <h>200</h>
+        </rect>
+        <pos>
+          <x>521.667</x>
+          <y>332.333</y>
+        </pos>
+        <zvalue>1</zvalue>
+        <visible>1</visible>
+        <frame-class>0</frame-class>
+        <frame-text-enabled>1</frame-text-enabled>
+        <frame-text>computer-5...</frame-text>
+        <transformation yRot="0" xRot="0" zRot="-12"/>
+        <mirror state="0"/>
+        <relativeFilePath>computer-512.png</relativeFilePath>
+        <fileUrl>/home/adolfo/hackathon/password-manager-generator/icons/computer-512.png</fileUrl>
+        <effects/>
+      </picture>
+      <picture>
+        <rect>
+          <x>-100</x>
+          <y>-100</y>
+          <w>200</w>
+          <h>200</h>
+        </rect>
+        <pos>
+          <x>831.667</x>
+          <y>124.333</y>
+        </pos>
+        <zvalue>2</zvalue>
+        <visible>1</visible>
+        <frame-class>0</frame-class>
+        <frame-text-enabled>1</frame-text-enabled>
+        <frame-text>database-5...</frame-text>
+        <transformation yRot="0" xRot="0" zRot="19"/>
+        <mirror state="0"/>
+        <relativeFilePath>database-512.png</relativeFilePath>
+        <fileUrl>/home/adolfo/hackathon/password-manager-generator/icons/database-512.png</fileUrl>
+        <effects/>
+      </picture>
+      <picture>
+        <rect>
+          <x>-96</x>
+          <y>-96</y>
+          <w>192</w>
+          <h>192</h>
+        </rect>
+        <pos>
+          <x>591.667</x>
+          <y>93.3333</y>
+        </pos>
+        <zvalue>3</zvalue>
+        <visible>1</visible>
+        <frame-class>0</frame-class>
+        <frame-text-enabled>1</frame-text-enabled>
+        <frame-text>folder-512...</frame-text>
+        <transformation yRot="0" xRot="0" zRot="-10,76575554474294"/>
+        <mirror state="0"/>
+        <relativeFilePath>folder-512.png</relativeFilePath>
+        <fileUrl>/home/adolfo/hackathon/password-manager-generator/icons/folder-512.png</fileUrl>
+        <effects/>
+      </picture>
+      <picture>
+        <rect>
+          <x>-100</x>
+          <y>-100</y>
+          <w>200</w>
+          <h>200</h>
+        </rect>
+        <pos>
+          <x>630.667</x>
+          <y>523.333</y>
+        </pos>
+        <zvalue>4</zvalue>
+        <visible>1</visible>
+        <frame-class>0</frame-class>
+        <frame-text-enabled>1</frame-text-enabled>
+        <frame-text>notebook-5...</frame-text>
+        <transformation yRot="0" xRot="0" zRot="-4"/>
+        <mirror state="0"/>
+        <relativeFilePath>notebook-512.png</relativeFilePath>
+        <fileUrl>/home/adolfo/hackathon/password-manager-generator/icons/notebook-512.png</fileUrl>
+        <effects/>
+      </picture>
+      <picture>
+        <rect>
+          <x>-100</x>
+          <y>-100</y>
+          <w>200</w>
+          <h>200</h>
+        </rect>
+        <pos>
+          <x>861.667</x>
+          <y>530.333</y>
+        </pos>
+        <zvalue>5</zvalue>
+        <visible>1</visible>
+        <frame-class>0</frame-class>
+        <frame-text-enabled>1</frame-text-enabled>
+        <frame-text>server-512...</frame-text>
+        <transformation yRot="0" xRot="0" zRot="5"/>
+        <mirror state="0"/>
+        <relativeFilePath>server-512.png</relativeFilePath>
+        <fileUrl>/home/adolfo/hackathon/password-manager-generator/icons/server-512.png</fileUrl>
+        <effects/>
+      </picture>
+      <picture>
+        <rect>
+          <x>-92</x>
+          <y>-92</y>
+          <w>184</w>
+          <h>184</h>
+        </rect>
+        <pos>
+          <x>757</x>
+          <y>309</y>
+        </pos>
+        <zvalue>6</zvalue>
+        <visible>1</visible>
+        <frame-class>0</frame-class>
+        <frame-text-enabled>1</frame-text-enabled>
+        <frame-text>stack-512...</frame-text>
+        <transformation yRot="0" xRot="0" zRot="8,746162262555195"/>
+        <mirror state="0"/>
+        <relativeFilePath>stack-512.png</relativeFilePath>
+        <fileUrl>/home/adolfo/hackathon/password-manager-generator/icons/stack-512.png</fileUrl>
+        <effects/>
+      </picture>
+    </content>
+    <preview><![CDATA[iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAc5JREFUaIHtlztLA0EQgL/4wEJFCGJErAQxFjYajY2dZUCwE/+Elbb+EHsr/0M6RVHxUdiJQgojvlAxKnoWt5esm83lsZdHMR8Me7szdzN7O7O3B4IgCIIgCIIAeBYByIbY3bcquGrMhOiegZgxVmmybaMXKIToJ1SrBxvJBLoavdHgGzgP0c9q132UB2yuUM30NHqjhZMK4x7/A/zUrhsOvFl4+KtxFqL3jH5HEQPGK+g2gRUgCTwQUfG6LmEcSAELwLySMeADGAK+lJ0Z6A9wDUw6+ncm7A2mLLaRb50uu1A/8BuiT6s2iz3Ytk/gHbgI0S+qNqmNxSil7Y2D7yKu34EDo6+nRzCBUeDN0MeAK0ffkZDBntP6JHI0Kf+jIghoS+sXgH3NZhCYA9aAbWAXWI3Cues22oV/oswBh8CRkktKW6jJLfAE5JWsO8bgTHcNNkHKxIE97CnVUWllEgQ3rfVtp9Kpeh8c1Wm0GkGwCdXuGOMBd/U+OMrTaMArftGC/6HT6yyB/Sjt4dfMS73OmrECA5RSYsnQJcrNi+TpkDqoVJCnwDD2wvWA40acNSOFNvC3yYxqH5Wk8dNkGRgxpON+bARBEARBEIQW8Ad974kJVvn/rAAAAABJRU5ErkJggg==]]></preview>
+  </canvas>
+</fotowall>
