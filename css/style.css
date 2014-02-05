@@ -37,3 +37,11 @@ input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
 textarea{overflow:auto;vertical-align:top;}
 table{border-collapse:collapse;border-spacing:0}
+body{background:#fafafa;font-family:'Open Sans';font-size:16px}
+header{background:#333;color:#eaeaea;padding:.5em;text-align:center;}
+header h1{margin:0;padding:0}
+header h2{font-style:italic;font-size:1.1em}
+.main{margin:1em;text-align:center;}
+.main fieldset{border:0;}
+.main fieldset label,.main fieldset input{display:inline-block;width:200px}
+.main fieldset input{border-radius:5px}
