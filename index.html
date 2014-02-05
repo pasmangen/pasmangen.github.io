@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/style.css"/>
 
-    <script src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js'></script>
+    <script src='lib/modernizr/modernizr-2.7.1.min.js'></script>
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -31,12 +31,18 @@
                 <input type="text" name="user" id="user" value="enter the user name" />
             </fieldset>
             <fieldset>
-                <label for="password">Master Password:</label>
-                <input type="password" name="password" id="password" />
+                <input type="button" id="coordenate" value="Calculate Coordenate" />
             </fieldset>
+        </form>
+
+        <form action="#">
             <fieldset>
                 <label for="code">Card Code:</label>
                 <input type="text" name="code" id="code" value="enter the card code" />
+            </fieldset>
+            <fieldset>
+                <label for="password">Master Password:</label>
+                <input type="password" name="password" id="password" />
             </fieldset>
             <fieldset>
                 <input type="button" id="generate" value="Generate Password" />

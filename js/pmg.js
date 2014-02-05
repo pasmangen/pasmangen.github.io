@@ -5,7 +5,7 @@ $(document).ready(function() {
   $('#generate').click(function(){
 
       var account = $('#account').val();
-      console.log('account='+account);
+      console.log('account='+account));
 
       var user = $('#user').val();
       console.log('user='+user);
