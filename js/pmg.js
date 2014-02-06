@@ -9,7 +9,8 @@ var sumCharCode = function(str) {
     return s;
 }
 
-var calculateCoordenates = function() {
+var calculateCoordenates = function(e) {
+    e.preventDefault();
 
     var account = $('#account').val();
     console.log('account='+account);
@@ -34,7 +35,8 @@ var calculateCoordenates = function() {
     $('#codeLabel').html('Code of cell <strong>['+coordenate+']</strong>:');
 };
 
-var generatePassword = function() {
+var generatePassword = function(e) {
+    e.preventDefault();
 
     var account = $('#account').val();
     console.log('account='+account);

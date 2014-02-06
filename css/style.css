@@ -66,3 +66,4 @@ footer{color:#aaa;font-size:.8em;text-align:center}
 #viewCodesCard table th{background:#00a352;color:#eaeaea;border-top-left-radius:4px;border-top-right-radius:4px}
 #viewCodesCard table tr:nth-child(odd){background:#ddd}
 #viewCodesCard table td{padding:.5em}
+#viewCodesCard table td.cel{background:#00a352;color:#eaeaea}
