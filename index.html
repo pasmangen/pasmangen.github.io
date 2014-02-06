@@ -7,6 +7,7 @@
     <meta name="description" content="Password Manager Generator">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./lib/greywyvern/keyboard/keyboard.css">
 
     <script src='lib/modernizr/modernizr-2.7.1.min.js'></script>
 </head>
@@ -43,11 +44,13 @@
         <form>
             <fieldset>
                 <label id="codeLabel" for="code">Card Code:&nbsp;</label>
-                <input type="text" name="code" id="code" placeholder="Enter the card code" required/>
+                <input type="text" name="code" id="code" 
+                     class="keyboardInput" placeholder="Enter the card code" required/>
             </fieldset>
             <fieldset>
                 <label for="password">Master Password:</label>
-                <input type="password" name="password" id="password" required/>
+                <input type="password" name="password" id="password"
+                    class="keyboardInput" required/>
             </fieldset>
             <fieldset>
                 <a class="btn" href='#' id="generate">
@@ -77,5 +80,6 @@
     <script src="./lib/jquery/jquery-2.1.0.min.js"></script>
     <script src="./lib/phpjs/md5.pack.js"></script>
     <script src="./js/pmg.js"></script>
+    <script src="./lib/greywyvern/keyboard/keyboard.js"></script>
 </body>
 </html>
