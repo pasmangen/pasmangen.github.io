@@ -35,7 +35,7 @@ var generateCodesCard = function() {
     var codesCard = '';
     codesCard += '<table>';
 
-    var cardName = $('#cardName').val();
+    var cardName = $('#cardName').val() || 'PMG';
     codesCard += '<th colspan="'+(NUM_COLUMNS*2)+'">'+cardName.toUpperCase()+'</th>';
     
     var data = getData();
@@ -58,13 +58,16 @@ var generateCodesCard = function() {
         codesCard += '</tr>';
     }
     
-    $('#generateCodesCard').slideUp('slow', function() {
-        $('#viewCodesCard').slideDown('slow');
-    });
-    
     codesCard += '</table>';
     
-    $('#viewCodesCard table').html(codesCard);
+    $('.hiddenWithCodesCard').slideUp('slow', function() {
+        $('#viewCodesCard').html(codesCard);
+        $('#viewCodesCard').slideDown('slow', function() {
+            window.print();
+        });
+        
+    });
+    
 };
 
 // Document OnLoad
