@@ -80,3 +80,11 @@ $(function() {
     $('#coordenates').on('click', calculateCoordenates);
     $('#generate').on('click', generatePassword);
 });
+
+// Copy button
+$("a#copy-button").clipboard({
+    path: "js/jquery.clipboard.swf",
+    copy: function() {
+       	return $('#genpass').text();
+    }
+});

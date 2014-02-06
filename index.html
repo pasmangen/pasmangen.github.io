@@ -40,7 +40,7 @@
             <fieldset>
                 <a class="btn" href="#" id="coordenates">
                     <span class="icon-key"></span>
-                    Calculate Coordenate
+                    Calculate Coordinate
                 </a>
             </fieldset>
         </form>
@@ -59,9 +59,7 @@
                     class="keyboardInput" required/>
             </fieldset>
             <fieldset>
-                <a class="btn" href='#' id="generate">
-                    <span class='icon-lock'></span>Generate Password
-                </a>
+                <a class="btn" href='#' id="generate"><span class='icon-lock'></span>Generate Password</a>
             </fieldset>
         </form>
     </section>
@@ -73,6 +71,7 @@
             </fieldset>
             <fieldset>
                 <p id="genpass"></p>
+				<a class='btn' href="#" id='copy-button'>Copy to clipboard</a>
             </fieldset>
         </form>
     </section>
@@ -83,6 +82,7 @@
 
     <script src='//localhost:35729/livereload.js'></script>
     <script src="./lib/jquery/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.clipboard.js"></script>
     <script src="./lib/phpjs/md5.pack.js"></script>
     <script src="./js/pmg.js"></script>
     <script src="./lib/greywyvern/keyboard/keyboard.js"></script>
