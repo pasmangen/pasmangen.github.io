@@ -51,6 +51,8 @@ header{background:url("http://techchurian.files.wordpress.com/2013/07/hackers_se
 header h1{margin:0;padding:0}
 header h2{font-style:italic;font-size:1.1em}
 footer{color:#aaa;font-size:.8em;text-align:center}
+nav{background:#00a352;border-bottom-left-radius:5px;border-bottom-right-radius:5px;margin:0 auto;padding:.5em 0;text-align:center;width:250px;}
+nav a{color:#eaeaea;font-size:.9em;text-decoration:none}
 .main{margin:.5em;text-align:center;}
 .main form{border-bottom:1px dashed #ccc;margin:2em 0}
 .main fieldset{border:0;}
