@@ -30,7 +30,7 @@ var getData = function() {
 var generateCodesCard = function() {
     
     var codesCard = '';
-    codesCard += '<table border="1" align="center">';
+    codesCard += '<table>';
     
     var numColumns = 10;
     var numRows = 6;
@@ -44,7 +44,7 @@ var generateCodesCard = function() {
     for ( var row = 0; row < numRows; row++) {
         codesCard += '<tr>';
             for ( var col = 0; col < numColumns; col++) {
-                codesCard += '<td><strong>'+cel+'</strong></td>';
+                codesCard += '<td class="cel"><strong>'+cel+'</strong></td>';
 
                 var init = (cel-1)*4;
                 console.log('init='+init);
@@ -64,13 +64,12 @@ var generateCodesCard = function() {
     
     codesCard += '</table>';
     
-    $('#viewCodesCard').html(codesCard);
+    $('#viewCodesCard table').html(codesCard);
 };
 
 // Document OnLoad
 $(function() {
 
     $('#viewCodesCard').hide();
-
     $('#generate').on('click', generateCodesCard);
 });
