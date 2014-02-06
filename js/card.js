@@ -1,3 +1,6 @@
+var NUM_COLUMNS = 4;
+var NUM_ROWS = 10;
+
 var getData = function() {
 
     var birthplace = $('#birthplace').val().toLocaleLowerCase();
@@ -31,19 +34,16 @@ var generateCodesCard = function() {
     
     var codesCard = '';
     codesCard += '<table>';
-    
-    var numColumns = 10;
-    var numRows = 6;
 
     var cardName = $('#cardName').val();
-    codesCard += '<th colspan="'+(numColumns*2)+'">'+cardName.toUpperCase()+'</th>';
+    codesCard += '<th colspan="'+(NUM_COLUMNS*2)+'">'+cardName.toUpperCase()+'</th>';
     
     var data = getData();
     
     var cel = 1;
-    for ( var row = 0; row < numRows; row++) {
+    for ( var row = 0; row < NUM_ROWS; row++) {
         codesCard += '<tr>';
-            for ( var col = 0; col < numColumns; col++) {
+            for ( var col = 0; col < NUM_COLUMNS; col++) {
                 codesCard += '<td class="cel"><strong>'+cel+'</strong></td>';
 
                 var init = (cel-1)*4;

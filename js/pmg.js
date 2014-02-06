@@ -1,4 +1,5 @@
 var GENERATED_PASSWORD_LENGTH = 32; // max 32
+var CODES_CARD_CELLS = 40;
 
 var sumCharCode = function(str) {
     
@@ -25,7 +26,7 @@ var calculateCoordenates = function(e) {
     var dataCode = sumCharCode(data);
     console.log('dataCode='+dataCode);
     
-    var coordenate = dataCode%60;
+    var coordenate = dataCode % CODES_CARD_CELLS;
     console.log('coordenate='+coordenate);
     
     $('#calculateCoordenates').slideUp('slow', function() {
