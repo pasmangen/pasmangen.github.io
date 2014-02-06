@@ -1,9 +1,9 @@
-var GENERATED_PASSWORD_LENGTH = 12; // max 32
+var GENERATED_PASSWORD_LENGTH = 32; // max 32
 
 var sumCharCode = function(str) {
     
     var s = 0;
-    for(i=0; i<str.length; i++) {
+    for( var i = 0; i < str.length; i++ ) {
         s += str.charCodeAt(i);
     }
     return s;
@@ -53,7 +53,9 @@ var generatePassword = function() {
     console.log('data='+data);
 
     var dataMd5 = md5(data);
+    dataMd5 = md5(dataMd5+'PASWORD-MANGER-GENERATOR'+dataMd5);
     console.log('dataMd5='+dataMd5);
+    
 
     var generatedPassword = dataMd5.substr(0, GENERATED_PASSWORD_LENGTH);
     console.log('generatedPassword='+generatedPassword);

@@ -1,42 +1,68 @@
-var getData1Md5 = function() {
+var getData = function() {
 
-    var birthplace = $('#birthplace').val();
+    var birthplace = $('#birthplace').val().toLocaleLowerCase();
     console.log('birthplace='+birthplace);
     
-    var childhoodFriend = $('#childhoodFriend').val();
+    var childhoodFriend = $('#childhoodFriend').val().toLocaleLowerCase();
     console.log('childhoodFriend='+childhoodFriend);
-    
-    var data1 = birthplace+childhoodFriend;
-    data1 = data1.toLocaleLowerCase();
-    console.log('data1='+data1);
-    
-    var data1Md5 = md5(data1);
-    console.log('data1Md5='+data1Md5);
-};
 
-var getData2Md5 = function() {
-
-    var schoolName = $('#schoolName').val();
+    var schoolName = $('#schoolName').val().toLocaleLowerCase();
     console.log('schoolName='+schoolName);
     
-    var driverLicense = $('#driverLicense').val();
-    console.log('driverLicense='+driverLicense);
+    var cardName = $('#cardName').val().toLocaleLowerCase();
+    console.log('cardName='+cardName);
     
-    var data2 = schoolName+driverLicense;
-    data2 = data2.toLocaleLowerCase();
-    console.log('data2='+data2);
+    var data = '';
+    data += md5(birthplace+cardName);
+    data += md5(data);
+    data += md5(childhoodFriend+cardName);
+    data += md5(data);
+    data += md5(schoolName+cardName);
+    data += md5(data);
+    data += md5(cardName+cardName);
+    data += md5(data);
+
+    console.log('data='+data);
     
-    var data2Md5 = md5(data2);
-    console.log('data2Md5='+data2Md5);
+    return data;
 };
 
 var generateCodesCard = function() {
+    
+    var codesCard = '';
+    codesCard += '<table border="1" align="center">';
+    
+    var numColumns = 10;
+    var numRows = 6;
 
-    var codesCard = 'TO-DO';
+    var cardName = $('#cardName').val();
+    codesCard += '<th colspan="'+(numColumns*2)+'">'+cardName.toUpperCase()+'</th>';
+    
+    var data = getData();
+    
+    var cel = 1;
+    for ( var row = 0; row < numRows; row++) {
+        codesCard += '<tr>';
+            for ( var col = 0; col < numColumns; col++) {
+                codesCard += '<td><strong>'+cel+'</strong></td>';
+
+                var init = (cel-1)*4;
+                console.log('init='+init);
+                
+                var subData = data.substr(init, 4);
+                console.log('subData='+subData);
+                
+                codesCard += '<td>'+subData+'</td>';
+                cel++;
+            }
+        codesCard += '</tr>';
+    }
     
     $('#generateCodesCard').slideUp('slow', function() {
         $('#viewCodesCard').slideDown('slow');
     });
+    
+    codesCard += '</table>';
     
     $('#viewCodesCard').html(codesCard);
 };
