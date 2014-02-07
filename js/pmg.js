@@ -82,9 +82,11 @@ $(function() {
 });
 
 // Copy button
-$("a#copy-button").clipboard({
-    path: "js/jquery.clipboard.swf",
+$("#copy-button").clipboard({
+    path: "lib/jquery.clipboard/jquery.clipboard.swf",
     copy: function() {
-       	return $('#genpass').text();
+        var toCopy = $('#genpass').text();
+        console.log('toCopy='+toCopy);
+       	return toCopy;
     }
 });
