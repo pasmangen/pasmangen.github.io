@@ -60,12 +60,12 @@ var generateCodesCard = function() {
     
     codesCard += '</table>';
     
-    $('.hiddenWithCodesCard').slideUp('slow', function() {
-        $('#viewCodesCard').html(codesCard);
+    $('#viewCodesCard').html(codesCard);
+    
+    $('.hiddenWithCodesCard').slideUp('slow', function() {    
         $('#viewCodesCard').slideDown('slow', function() {
             window.print();
         });
-        
     });
     
 };
