@@ -1,6 +1,8 @@
 var GENERATED_PASSWORD_LENGTH = 32; // max 32
 var CODES_CARD_CELLS = 40;
 
+var ls = localStorage;
+
 var sumCharCode = function(str) {
     
     var s = 0;
@@ -13,8 +15,12 @@ var sumCharCode = function(str) {
 var calculateCoordenates = function(e) {
     e.preventDefault();
 
-    var account = $('#account').val();
-    console.log('account='+account);
+    if(!ls.account) { 
+        var account = $('#account').val();
+        console.log('account='+account);
+    } else {
+        var account = ls.account;
+    }
     
     var user = $('#user').val();
     console.log('user='+user);
