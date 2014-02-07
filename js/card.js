@@ -16,14 +16,14 @@ var getData = function() {
     console.log('cardName='+cardName);
     
     var data = '';
-    data += md5(birthplace+cardName);
-    data += md5(data);
-    data += md5(childhoodFriend+cardName);
-    data += md5(data);
-    data += md5(schoolName+cardName);
-    data += md5(data);
-    data += md5(cardName+cardName);
-    data += md5(data);
+    data += md5(birthplace+childhoodFriend+schoolName+cardName);
+    data += md5(data+data);
+    data += md5(childhoodFriend+schoolName+cardName+birthplace);
+    data += md5(data+data);
+    data += md5(schoolName+cardName+birthplace+childhoodFriend);
+    data += md5(data+data);
+    data += md5(cardName+birthplace+childhoodFriend+schoolName);
+    data += md5(data+data);
 
     console.log('data='+data);
     
