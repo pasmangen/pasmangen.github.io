@@ -33,7 +33,7 @@ var calculateCoordenates = function(e) {
         $('#generatePassword').slideDown('slow');
     });
     
-    $('#codeLabel').html('Code of cell <strong>['+coordenate+']</strong>:');
+    $('#codeLabel').html('Code of cell [<strong style="color: #00A352">'+coordenate+'</strong>]:');
 };
 
 var generatePassword = function(e) {
