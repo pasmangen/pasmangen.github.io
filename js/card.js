@@ -62,12 +62,10 @@ var generateCodesCard = function() {
     
     $('#viewCodesCard').html(codesCard);
     
-    $('.hiddenWithCodesCard').slideUp('slow', function() {    
-        $('#viewCodesCard').slideDown('slow', function() {
-            window.print();
-        });
+    $('.hiddenWithCodesCard').slideUp('slow')
+    $('#viewCodesCard').slideDown('slow', function() {
+        window.print();
     });
-    
 };
 
 // Document OnLoad
