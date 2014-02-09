@@ -1,7 +1,7 @@
 var NUM_COLUMNS = 4;
 var NUM_ROWS = 10;
 
-var getData = function() {
+var getHash = function() {
 
     var birthplace = $('#birthplace').val().toLocaleLowerCase();
     console.log('birthplace='+birthplace);
@@ -15,19 +15,18 @@ var getData = function() {
     var cardName = $('#cardName').val().toLocaleLowerCase();
     console.log('cardName='+cardName);
     
-    var data = '';
-    data += md5(birthplace+childhoodFriend+schoolName+cardName);
-    data += md5(data+data);
-    data += md5(childhoodFriend+schoolName+cardName+birthplace);
-    data += md5(data+data);
-    data += md5(schoolName+cardName+birthplace+childhoodFriend);
-    data += md5(data+data);
-    data += md5(cardName+birthplace+childhoodFriend+schoolName);
-    data += md5(data+data);
+    var data1 = birthplace+childhoodFriend+schoolName+cardName;
+    data1 = data1.toLocaleLowerCase();
+    console.log('data1='+data1);
 
-    console.log('data='+data);
+    var data2 = schoolName+cardName+birthplace+childhoodFriend;
+    data2 = data2.toLocaleLowerCase();
+    console.log('data2='+data2);
     
-    return data;
+    var hash = hashWrapper(data1)+hashWrapper(data2);
+    console.log('hash='+hash);
+    
+    return hash;
 };
 
 var generateCodesCard = function() {
@@ -38,7 +37,7 @@ var generateCodesCard = function() {
     var cardName = $('#cardName').val() || 'PMG';
     codesCard += '<th colspan="'+(NUM_COLUMNS*2)+'">'+cardName.toUpperCase()+'</th>';
     
-    var data = getData();
+    var hash = getHash();
     
     var cel = 1;
     for ( var row = 0; row < NUM_ROWS; row++) {
@@ -49,10 +48,10 @@ var generateCodesCard = function() {
                 var init = (cel-1)*4;
                 console.log('init='+init);
                 
-                var subData = data.substr(init, 4);
-                console.log('subData='+subData);
+                var subHash = hash.substr(init, 4);
+                console.log('subHash='+subHash);
                 
-                codesCard += '<td>'+subData+'</td>';
+                codesCard += '<td>'+subHash+'</td>';
                 cel++;
             }
         codesCard += '</tr>';

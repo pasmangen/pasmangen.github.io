@@ -1,4 +1,4 @@
-var GENERATED_PASSWORD_LENGTH = 32; // max 32
+var GENERATED_PASSWORD_LENGTH = 24; // max 88
 var CODES_CARD_CELLS = 40;
 
 var ls = localStorage;
@@ -61,12 +61,10 @@ var generatePassword = function(e) {
     data = data.toLocaleLowerCase();
     console.log('data='+data);
 
-    var dataMd5 = md5(data);
-    dataMd5 = md5(dataMd5+'PASWORD-MANGER-GENERATOR'+dataMd5);
-    console.log('dataMd5='+dataMd5);
-    
+    var hash = hashWrapper(data);
+    console.log('hash='+hash);
 
-    var generatedPassword = dataMd5.substr(0, GENERATED_PASSWORD_LENGTH);
+    var generatedPassword = hash.substr(0, GENERATED_PASSWORD_LENGTH);
     console.log('generatedPassword='+generatedPassword);
     
     $('#generatePassword').slideUp('slow', function() {
