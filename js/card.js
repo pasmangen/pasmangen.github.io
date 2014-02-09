@@ -71,6 +71,5 @@ var generateCodesCard = function() {
 // Document OnLoad
 $(function() {
 
-    $('#viewCodesCard').hide();
     $('#generate').on('click', generateCodesCard);
 });
