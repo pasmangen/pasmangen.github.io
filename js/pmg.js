@@ -1,7 +1,32 @@
 var GENERATED_PASSWORD_LENGTH = 24; // max 88
 var CODES_CARD_CELLS = 40;
 
-var ls = localStorage;
+var removeLocalStorage = function() {
+
+    Object.keys(localStorage).forEach(function(key){
+       localStorage.removeItem(key);
+    });
+};
+
+//removeLocalStorage();
+
+var getObjectFromLocalStorage = function(objName) {
+    var obj = localStorage.getItem(objName);
+    if ( obj ) {
+        obj = JSON.parse(obj);
+    }
+    return obj;
+};
+
+var setObjectToLocalStorage = function(objName, obj) {
+    localStorage.setItem(objName, JSON.stringify(obj));
+};
+
+var accounts = getObjectFromLocalStorage('accounts') || [];
+console.log('accounts=', accounts);
+
+var users = getObjectFromLocalStorage('users') || [];
+console.log('users=', users);
 
 var sumCharCode = function(str) {
     
@@ -10,23 +35,42 @@ var sumCharCode = function(str) {
         s += str.charCodeAt(i);
     }
     return s;
-}
+};
+
+var addAccount = function(account) {
+    
+    if ( $.inArray(account, accounts) ) {
+        accounts.push(account);
+        accounts.sort();
+    }
+    console.log('accounts=', accounts);
+    setObjectToLocalStorage('accounts', accounts);
+};
+
+var addUser = function(user) {
+    
+    if ( $.inArray(user, users) ) {
+        users.push(user);
+        users.sort();
+    }
+    console.log('users=', users);
+    setObjectToLocalStorage('users', users);
+};
 
 var calculateCoordenates = function(e) {
     e.preventDefault();
 
-    if(!ls.account) { 
-        var account = $('#account').val();
-        console.log('account='+account);
-    } else {
-        var account = ls.account;
-    }
+    var account = $('#account').val().toLocaleLowerCase();
+    console.log('account='+account);
     
-    var user = $('#user').val();
+    addAccount(account);
+    
+    var user = $('#user').val().toLocaleLowerCase();
     console.log('user='+user);
+
+    addUser(user);
     
-    var data = account+user;
-    data = data.toLocaleLowerCase();
+    var data = (account+user);
     console.log('data='+data);
     
     var dataCode = sumCharCode(data);
@@ -57,8 +101,7 @@ var generatePassword = function(e) {
     var code = $('#code').val();
     console.log('code='+code);
 
-    var data = account+user+password+code;
-    data = data.toLocaleLowerCase();
+    var data = (account+user).toLowerCase()+code+password;
     console.log('data='+data);
 
     var hash = hashWrapper(data);
@@ -71,8 +114,7 @@ var generatePassword = function(e) {
         $('#viewPassword').slideDown('slow');
     });
 
-    $('#genpass')
-      .text(generatedPassword);
+    $('#genpass').text(generatedPassword);
 };
 
 var updateCopyButton = function() {
@@ -90,7 +132,14 @@ var updateCopyButton = function() {
 // Document OnLoad
 $(function() {
 
+
     $('#coordenates').on('click', calculateCoordenates);
     $('#generate').on('click', generatePassword);
+    $('#account').autocomplete({
+      source: accounts
+    });
+    $('#user').autocomplete({
+      source: users
+    });
     //updateCopyButton();
 });
