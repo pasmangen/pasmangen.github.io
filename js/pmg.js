@@ -77,19 +77,22 @@ var generatePassword = function(e) {
       .text(generatedPassword);
 };
 
+var updateCopyButton = function() {
+
+    $("#copy-button").clipboard({
+        path: "lib/jquery.clipboard/jquery.clipboard.swf",
+        copy: function() {
+            var toCopy = $('#genpass').text();
+            console.log('toCopy='+toCopy);
+            return toCopy;
+        }
+    });
+}
+
 // Document OnLoad
 $(function() {
 
     $('#coordenates').on('click', calculateCoordenates);
     $('#generate').on('click', generatePassword);
-});
-
-// Copy button
-$("#copy-button").clipboard({
-    path: "lib/jquery.clipboard/jquery.clipboard.swf",
-    copy: function() {
-        var toCopy = $('#genpass').text();
-        console.log('toCopy='+toCopy);
-       	return toCopy;
-    }
+    //updateCopyButton();
 });
