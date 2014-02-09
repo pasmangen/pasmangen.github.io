@@ -74,9 +74,6 @@ var generatePassword = function(e) {
 // Document OnLoad
 $(function() {
 
-    $('#generatePassword').hide();
-    $('#viewPassword').hide();
-
     $('#coordenates').on('click', calculateCoordenates);
     $('#generate').on('click', generatePassword);
 });
