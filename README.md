@@ -17,19 +17,19 @@ Sys Admins:
 
 All of them have a lot of accounts to manage.
 
-# The simplest solution
+# The simplest solution: same passwords
 
 Use the same password for all our accounts.
 
 **PROBLEM: If someone gets our master password, could login in all our accounts.**
 
-# The safest solution
+# The safest solution: different passwords
 
 Use different passwords for each of our accounts.
 
 **PROBLEM: How to save all those passwords?**
 
-# Save them in a CVS file
+# Save passwords in a CVS file
 
 <img src="./icons/excel-3-512.png" width="128" alt="CVS File">
 
@@ -37,7 +37,7 @@ It is the easiest way to save all our passwords.
 
 **PROBLEM: If someone gets our CVS file, could login in all our accounts.**
 
-# Save them in a encrypted database
+# Save passwords in a encrypted database
 
 <img src="./icons/data-encryption-512.png" width="128" alt="Encrypted Database">
 
@@ -50,8 +50,8 @@ Now, if someone gets our encrypted database, must also get the password of the d
 <img src="./img/icon-pmg-bis.png" width="128" alt="PMG - Password Manager Generator">
 
 PMG is a **Password Manager Generator**: 
-    - You don't have to save any passwords. They are generated from the account name, the user name, a coordinate of one codes card and a master password. 
-    - Now, **you just have to memorize a master password**, and kepp save a semi-random codes card (you can print it and carry in your wallet)
+* You don't have to save any passwords. They are generated from the account name, the user name, a coordinate of one codes card and a master password. 
+* Now, **you just have to memorize a master password**, and kepp save a semi-random codes card (you can print it and carry in your wallet)
 
 # How PMG works?
 
