@@ -31,24 +31,23 @@ Use different passwords for each of our accounts.
 
 # Save them in a CVS file
 
-It is the easiest way to save all our passwords.
-
 <img src="./icons/excel-3-512.png" width="128" alt="CVS File">
+
+It is the easiest way to save all our passwords.
 
 **PROBLEM: If someone gets our CVS file, could login in all our accounts.**
 
 # Save them in a encrypted database
 
-Now, if someone gets our encrypted database, must also get the password of the database to crack our other passwords.
-
 <img src="./icons/data-encryption-512.png" width="128" alt="Encrypted Database">
+
+Now, if someone gets our encrypted database, must also get the password of the database to crack our other passwords.
 
 **PROBLEM: Where to store the encrypted database? In localhost? In the cloud?**
 
 # The ultimate solution: PMG
 
-<img src="./img/icon-pmg.png" width="128" alt="PMG - Password Manager Generator">
-
+<img src="./img/icon-pmg-bis.png" width="128" alt="PMG - Password Manager Generator">
 
 PMG is a **Password Manager Generator**: 
     - You don't have to save any passwords. They are generated from the account name, the user name, a coordinate of one codes card and a master password. 
