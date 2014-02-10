@@ -7,7 +7,7 @@ The easy way to generate your passwords
 
 Comunity Managers:
 
-![Comunity Managers](./icons/comunity-managers.png)
+<img src="./icons/comunity-managers.png" width="256" alt="Comunity Managers">
 
 Sys Admins:
 
@@ -19,7 +19,7 @@ All of them have a lot of accounts to manage.
 
 Use the same password for all our accounts.
 
-PROBLEM: If someone gets our master password, could login in all our accounts.
+**PROBLEM: If someone gets our master password, could login in all our accounts.**
 
 # The safest solution
 
