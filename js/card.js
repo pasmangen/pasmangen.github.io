@@ -3,28 +3,14 @@ var NUM_ROWS = 10;
 
 var getHash = function() {
 
-    var birthplace = $('#birthplace').val().toLocaleLowerCase();
-    console.log('birthplace='+birthplace);
+    var birthplace      = normalizeText( $('#birthplace').val() );
+    var childhoodFriend = normalizeText( $('#childhoodFriend').val() );
+    var schoolName      = normalizeText( $('#schoolName').val() );
+    var cardName        = normalizeText( $('#cardName').val() );
     
-    var childhoodFriend = $('#childhoodFriend').val().toLocaleLowerCase();
-    console.log('childhoodFriend='+childhoodFriend);
-
-    var schoolName = $('#schoolName').val().toLocaleLowerCase();
-    console.log('schoolName='+schoolName);
-    
-    var cardName = $('#cardName').val().toLocaleLowerCase();
-    console.log('cardName='+cardName);
-    
-    var data1 = birthplace+childhoodFriend+schoolName+cardName;
-    data1 = data1.toLocaleLowerCase();
-    console.log('data1='+data1);
-
-    var data2 = schoolName+cardName+birthplace+childhoodFriend;
-    data2 = data2.toLocaleLowerCase();
-    console.log('data2='+data2);
-    
-    var hash = hashWrapper(data1)+hashWrapper(data2);
-    console.log('hash='+hash);
+    var data1   = birthplace+childhoodFriend+schoolName+cardName;
+    var data2   = schoolName+cardName+birthplace+childhoodFriend;
+    var hash    = hashWrapper(data1)+hashWrapper(data2);
     
     return hash;
 };
@@ -44,13 +30,8 @@ var generateCodesCard = function() {
         codesCard += '<tr>';
             for ( var col = 0; col < NUM_COLUMNS; col++) {
                 codesCard += '<td class="cel"><strong>'+cel+'</strong></td>';
-
                 var init = (cel-1)*4;
-                console.log('init='+init);
-                
                 var subHash = hash.substr(init, 4);
-                console.log('subHash='+subHash);
-                
                 codesCard += '<td>'+subHash+'</td>';
                 cel++;
             }

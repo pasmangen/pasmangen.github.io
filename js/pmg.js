@@ -11,6 +11,7 @@ var removeLocalStorage = function() {
 //removeLocalStorage();
 
 var getObjectFromLocalStorage = function(objName) {
+    
     var obj = localStorage.getItem(objName);
     if ( obj ) {
         obj = JSON.parse(obj);
@@ -19,6 +20,7 @@ var getObjectFromLocalStorage = function(objName) {
 };
 
 var setObjectToLocalStorage = function(objName, obj) {
+    
     localStorage.setItem(objName, JSON.stringify(obj));
 };
 
@@ -43,7 +45,6 @@ var addAccount = function(account) {
         accounts.push(account);
         accounts.sort();
     }
-    console.log('accounts=', accounts);
     setObjectToLocalStorage('accounts', accounts);
 };
 
@@ -53,31 +54,21 @@ var addUser = function(user) {
         users.push(user);
         users.sort();
     }
-    console.log('users=', users);
     setObjectToLocalStorage('users', users);
 };
 
 var calculateCoordenates = function(e) {
     e.preventDefault();
 
-    var account = $('#account').val().toLocaleLowerCase();
-    console.log('account='+account);
-    
+    var account     = normalizeText( $('#account').val() );
     addAccount(account);
     
-    var user = $('#user').val().toLocaleLowerCase();
-    console.log('user='+user);
-
+    var user        = normalizeText( $('#user').val() );
     addUser(user);
     
-    var data = (account+user);
-    console.log('data='+data);
-    
-    var dataCode = sumCharCode(data);
-    console.log('dataCode='+dataCode);
-    
-    var coordenate = dataCode % CODES_CARD_CELLS;
-    console.log('coordenate='+coordenate);
+    var data        = account + user;
+    var dataCode    = sumCharCode(data);
+    var coordenate  = dataCode % CODES_CARD_CELLS;
     
     $('#calculateCoordenates').slideUp('slow', function() {
         $('#generatePassword').slideDown('slow');
@@ -89,26 +80,13 @@ var calculateCoordenates = function(e) {
 var generatePassword = function(e) {
     e.preventDefault();
 
-    var account = $('#account').val();
-    console.log('account='+account);
-
-    var user = $('#user').val();
-    console.log('user='+user);
-
-    var password = $('#password').val();
-    console.log('password='+password);
-
-    var code = $('#code').val();
-    console.log('code='+code);
-
-    var data = (account+user).toLowerCase()+code+password;
-    console.log('data='+data);
-
-    var hash = hashWrapper(data);
-    console.log('hash='+hash);
-
-    var generatedPassword = hash.substr(0, GENERATED_PASSWORD_LENGTH);
-    console.log('generatedPassword='+generatedPassword);
+    var account             = $('#account').val();
+    var user                = $('#user').val();
+    var password            = $('#password').val();
+    var code                = $('#code').val();
+    var data                = normalizeText(account+user) + code + password;
+    var hash                = hashWrapper(data);
+    var generatedPassword   = hash.substr(0, GENERATED_PASSWORD_LENGTH);
     
     $('#generatePassword').slideUp('slow', function() {
         $('#viewPassword').slideDown('slow');
@@ -123,7 +101,6 @@ var updateCopyButton = function() {
         path: "lib/jquery.clipboard/jquery.clipboard.swf",
         copy: function() {
             var toCopy = $('#genpass').text();
-            console.log('toCopy='+toCopy);
             return toCopy;
         }
     });
