@@ -113,7 +113,7 @@ Use **different passwords** for each of our accounts.
                 <li>Developed in HTML, CSS and JavaScript, so PMG is <strong>very portable</strong> (future iOS and Android).</li>
                 <li>PMG <strong>doesn't save any data in the cloud</strong>, everything is generated locally.</li>
                 <li><strong>You only need to remember one master password</strong> and have a codes card.</li>
-            </ul> Save passwords 
+            </ul>
         </td>
     </tr>
     <tr>
