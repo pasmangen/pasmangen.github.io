@@ -1,13 +1,13 @@
 PMG - Password Manager Generator
 ================================
 
-## The easy way to generate your passwords.
+### The easy way to generate your passwords.
 
 <iframe src="http://www.slideshare.net/slideshow/embed_code/31054958" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/asanzdiego/pmg-passwordmanagergeneratoren" title="PMG - Password Manager Generator [EN]" target="_blank">PMG - Password Manager Generator [Slides]</a> </div>
 
 [Download v1.1](https://github.com/pasmangen/pasmangen.github.io/archive/pmg-1.1.zip)
 
-# The problem
+## The problem
 
 <table>
     <tr>
@@ -22,25 +22,21 @@ PMG - Password Manager Generator
 
 All of them have **a lot of accounts to manage**.
 
-# The simplest solution
+## The simplest solution:
 
-## Same passwords
-
-Use the same password for all our accounts.
+Use the **same password** for all our accounts.
 
 **PROBLEM: If someone gets our master password, could login in all our accounts.**
 
-# The safest solution
+## The safest solution:
 
-## Different passwords
-
-Use different passwords for each of our accounts.
+Use **different passwords** for each of our accounts.
 
 **PROBLEM: How to save all those passwords?**
 
-# Save passwords
+## Save passwords
 
-## In a CVS file
+### In a CVS file
 
 <table>
     <tr>
@@ -52,7 +48,7 @@ Use different passwords for each of our accounts.
     </tr>
 </table>
 
-## In a encrypted database
+### In a encrypted database
 
 <table>
     <tr>
@@ -64,7 +60,7 @@ Use different passwords for each of our accounts.
     </tr>
 </table>
 
-# The ultimate solution: PMG
+## The ultimate solution: PMG
 
 <table>
     <tr>
@@ -81,7 +77,7 @@ Use different passwords for each of our accounts.
     </tr>
 </table>
 
-# How PMG works?
+## How PMG works?
 
 <table>
     <tr>
@@ -107,7 +103,7 @@ Use different passwords for each of our accounts.
     </tr>
 </table>
 
-# Advantages of PMG
+## Advantages of PMG
 
 <table>
     <tr>
@@ -117,7 +113,7 @@ Use different passwords for each of our accounts.
                 <li>Developed in HTML, CSS and JavaScript, so PMG is <strong>very portable</strong> (future iOS and Android).</li>
                 <li>PMG <strong>doesn't save any data in the cloud</strong>, everything is generated locally.</li>
                 <li><strong>You only need to remember one master password</strong> and have a codes card.</li>
-            </ul>
+            </ul> Save passwords 
         </td>
     </tr>
     <tr>
