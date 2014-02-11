@@ -15,8 +15,8 @@ The easy way to generate your passwords.
         <td align="center">Sys Admins:</td>
     </tr>
     <tr>
-        <td align="center"><img src="./icons/comunity-managers.png" width="384" alt="Comunity Managers"></td>
-        <td align="center"><img src="./icons/sysadmins.png" width="384" alt="Sys Admins"></td>
+        <td><img src="./icons/comunity-managers.png" width="384" alt="Comunity Managers"></td>
+        <td><img src="./icons/sysadmins.png" width="384" alt="Sys Admins"></td>
     </tr>
 </table>
 
@@ -38,7 +38,7 @@ Use different passwords for each of our accounts.
 
 <table>
     <tr>
-        <td width="256"><img src="./icons/excel-3-512.png" width="256" alt="CVS File"></td>
+        <td width="256" align="center"><img src="./icons/excel-3-512.png" width="128" alt="CVS File"></td>
         <td>
             <p>It is the easiest way to save all our passwords.</p>
             <p><strong>PROBLEM: If someone gets our CVS file, could login in all our accounts.<strong></p>
@@ -50,7 +50,7 @@ Use different passwords for each of our accounts.
 
 <table>
     <tr>
-        <td width="256"><img src="./icons/data-encryption-512.png" width="256" alt="Encrypted Database"></td>
+        <td width="256" align="center"><img src="./icons/data-encryption-512.png" width="128" alt="Encrypted Database"></td>
         <td>
             <p>Now, if someone gets our encrypted database, must also get the password of the database to crack our other passwords.</p>
             <p><strong>PROBLEM: Where to store the encrypted database? In localhost? In the cloud?</strong></p>
@@ -79,7 +79,7 @@ Use different passwords for each of our accounts.
 
 <table>
     <tr>
-        <td width="256"><img src="./icons/padlock.png" width="256" alt="Lock"></td>
+        <td width="256" align="center"><img src="./icons/padlock.png" width="128" alt="Lock"></td>
         <td>
             <ol>
                 <li>Enter the <strong>account name</strong> (eg: Twitter).</li>
@@ -90,7 +90,7 @@ Use different passwords for each of our accounts.
         </td>
     </tr>
     <tr>
-        <td width="256"><img src="./icons/padlock-unlock.png" width="256" alt="Unlock"></td>
+        <td width="256" align="center"><img src="./icons/padlock-unlock.png" width="128" alt="Unlock"></td>
         <td>
             <ul>
                 <li>After entering the data, PMG <strong>will generate a unique password</strong> for that account, 
