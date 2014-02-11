@@ -9,7 +9,7 @@ The easy way to generate your passwords.
 
 # The problem
 
-<table width="100%">
+<table>
     <tr>
         <td align="center">Comunity Managers:</td>
         <td align="center">Sys Admins:</td>
@@ -38,7 +38,7 @@ Use different passwords for each of our accounts.
 
 <table>
     <tr>
-        <td width="128"><img src="./icons/excel-3-512.png" width="128" alt="CVS File"></td>
+        <td width="256"><img src="./icons/excel-3-512.png" width="256" alt="CVS File"></td>
         <td>
             <p>It is the easiest way to save all our passwords.</p>
             <p><strong>PROBLEM: If someone gets our CVS file, could login in all our accounts.<strong></p>
@@ -50,7 +50,7 @@ Use different passwords for each of our accounts.
 
 <table>
     <tr>
-        <td width="128"><img src="./icons/data-encryption-512.png" width="128" alt="Encrypted Database"></td>
+        <td width="256"><img src="./icons/data-encryption-512.png" width="256" alt="Encrypted Database"></td>
         <td>
             <p>Now, if someone gets our encrypted database, must also get the password of the database to crack our other passwords.</p>
             <p><strong>PROBLEM: Where to store the encrypted database? In localhost? In the cloud?</strong></p>
@@ -62,7 +62,7 @@ Use different passwords for each of our accounts.
 
 <table>
     <tr>
-        <td><img src="./img/icon-pmg-bis.png" width="256" alt="PMG - Password Manager Generator"></td>
+        <td width="256"><img src="./img/icon-pmg-bis.png" width="256" alt="PMG - Password Manager Generator"></td>
         <td>
             PMG is a <strong>Password Manager Generator</strong>:
             <ul>
@@ -79,7 +79,7 @@ Use different passwords for each of our accounts.
 
 <table>
     <tr>
-        <td><img src="./icons/padlock.png" width="96" alt="Lock"></td>
+        <td width="256"><img src="./icons/padlock.png" width="256" alt="Lock"></td>
         <td>
             <ol>
                 <li>Enter the <strong>account name</strong> (eg: Twitter).</li>
@@ -90,7 +90,7 @@ Use different passwords for each of our accounts.
         </td>
     </tr>
     <tr>
-        <td><img src="./icons/padlock-unlock.png" width="96" alt="Unlock"></td>
+        <td width="256"><img src="./icons/padlock-unlock.png" width="256" alt="Unlock"></td>
         <td>
             <ul>
                 <li>After entering the data, PMG <strong>will generate a unique password</strong> for that account, 
@@ -105,7 +105,7 @@ Use different passwords for each of our accounts.
 
 <table>
     <tr>
-        <td><img src="./icons/approve-512.png" width="128" alt="Advantages 1"></td>
+        <td width="256"><img src="./icons/approve-512.png" width="256" alt="Advantages 1"></td>
         <td>
             <ul>
                 <li>Developed in HTML, CSS and JavaScript, so PMG is <strong>very portable</strong> (future iOS and Android).</li>
@@ -115,7 +115,7 @@ Use different passwords for each of our accounts.
         </td>
     </tr>
     <tr>
-        <td><img src="./icons/approve-512-bis.png" width="128" alt="Advantages 2"></td>
+        <td width="256"><img src="./icons/approve-512-bis.png" width="256" alt="Advantages 2"></td>
         <td>
             <ul>
                 <li>If someone gets the password of an account, <strong>do not gets the passwords of others accounts</strong>.</li>
