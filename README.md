@@ -1,7 +1,7 @@
 PMG - Password Manager Generator
 ================================
 
-The easy way to generate your passwords.
+## The easy way to generate your passwords.
 
 <iframe src="http://www.slideshare.net/slideshow/embed_code/31054958" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/asanzdiego/pmg-passwordmanagergeneratoren" title="PMG - Password Manager Generator [EN]" target="_blank">PMG - Password Manager Generator [Slides]</a> </div>
 
@@ -22,19 +22,25 @@ The easy way to generate your passwords.
 
 All of them have **a lot of accounts to manage**.
 
-# The simplest solution: same passwords
+# The simplest solution
+
+## Same passwords
 
 Use the same password for all our accounts.
 
 **PROBLEM: If someone gets our master password, could login in all our accounts.**
 
-# The safest solution: different passwords
+# The safest solution
+
+## Different passwords
 
 Use different passwords for each of our accounts.
 
 **PROBLEM: How to save all those passwords?**
 
-# Save passwords in a CVS file
+# Save passwords
+
+## In a CVS file
 
 <table>
     <tr>
@@ -46,7 +52,7 @@ Use different passwords for each of our accounts.
     </tr>
 </table>
 
-# Save passwords in a encrypted database
+## In a encrypted database
 
 <table>
     <tr>
