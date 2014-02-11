@@ -105,7 +105,7 @@ Use different passwords for each of our accounts.
 
 <table>
     <tr>
-        <td width="256"><img src="./icons/approve-512.png" width="256" alt="Advantages 1"></td>
+        <td width="256"><img src="./icons/approve-512.png" width="128" alt="Advantages 1"></td>
         <td>
             <ul>
                 <li>Developed in HTML, CSS and JavaScript, so PMG is <strong>very portable</strong> (future iOS and Android).</li>
@@ -115,7 +115,7 @@ Use different passwords for each of our accounts.
         </td>
     </tr>
     <tr>
-        <td width="256"><img src="./icons/approve-512-bis.png" width="256" alt="Advantages 2"></td>
+        <td width="256"><img src="./icons/approve-512-bis.png" width="128" alt="Advantages 2"></td>
         <td>
             <ul>
                 <li>If someone gets the password of an account, <strong>do not gets the passwords of others accounts</strong>.</li>
