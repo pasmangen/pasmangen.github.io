@@ -15,8 +15,8 @@ The easy way to generate your passwords.
         <td align="center">Sys Admins:</td>
     </tr>
     <tr>
-        <td align="center"><img src="./icons/comunity-managers.png" width="256" alt="Comunity Managers"></td>
-        <td align="center"><img src="./icons/sysadmins.png" width="256" alt="Sys Admins"></td>
+        <td align="center"><img src="./icons/comunity-managers.png" width="384" alt="Comunity Managers"></td>
+        <td align="center"><img src="./icons/sysadmins.png" width="384" alt="Sys Admins"></td>
     </tr>
 </table>
 
