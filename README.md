@@ -9,13 +9,16 @@ The easy way to generate your passwords.
 
 # The problem
 
-Comunity Managers:
-
-<img src="./icons/comunity-managers.png" width="256" alt="Comunity Managers">
-
-Sys Admins:
-
-<img src="./icons/sysadmins.png" width="256" alt="Sys Admins">
+<table>
+    <tr>
+        <td>Comunity Managers:</td>
+        <td><img src="./icons/comunity-managers.png" width="256" alt="Comunity Managers"></td>
+    </tr>
+    <tr>
+        <td>Sys Admins:</td>
+        <td><img src="./icons/sysadmins.png" width="256" alt="Sys Admins"></td>
+    </tr>
+</table>
 
 All of them have **a lot of accounts to manage**.
 
@@ -71,13 +74,20 @@ PMG is a **Password Manager Generator**:
 
 # Advantages of PMG
 
-<img src="./icons/approve-512.png" width="128" alt="Advantages 1">
-
+<table>
+    <tr>
+        <td><img src="./icons/approve-512.png" width="128" alt="Advantages 1"></td>
+        <td>
 * Developed in HTML, CSS and JavaScript, so PMG is **very portable** (future iOS and Android). 
 * PMG **doesn't save any data in the cloud**, everything is generated locally. 
 * **You only need to remember one master password** and have a codes card.
-
-<img src="./icons/approve-512-bis.png" width="128" alt="Advantages 2">
-
+        </td>
+    </tr>
+    <tr>
+        <td><img src="./icons/approve-512-bis.png" width="128" alt="Advantages 2"></td>
 * If someone gets the password of an account, **do not gets the passwords of others accounts**.
 * If someone wants to catch all our passwords **needs our master password and our codes card**.
+        <td>
+        </td>
+    </tr>
+</table>
