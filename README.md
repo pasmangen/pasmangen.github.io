@@ -5,6 +5,8 @@ The easy way to generate your passwords.
 
 <iframe src="http://www.slideshare.net/slideshow/embed_code/31054958" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/asanzdiego/pmg-passwordmanagergeneratoren" title="PMG - Password Manager Generator [EN]" target="_blank">PMG - Password Manager Generator [EN]</a> </div>
 
+[Download v1.1](https://github.com/pasmangen/pasmangen.github.io/archive/pmg-1.1.zip)
+
 # The problem
 
 Comunity Managers:
@@ -15,7 +17,7 @@ Sys Admins:
 
 <img src="./icons/sysadmins.png" width="128" alt="Sys Admins">
 
-All of them have a lot of accounts to manage.
+All of them have **a lot of accounts to manage**.
 
 # The simplest solution: same passwords
 
@@ -55,14 +57,14 @@ PMG is a **Password Manager Generator**:
 
 # How PMG works?
 
-<img src="./icons/padlock.png" width="128" alt="Lock">
+<img src="./icons/padlock.png" width="96" alt="Lock">
 
 1. Enter the **account name** (eg: Twitter) 
 2. Enter the **username** (eg: hackthonlovers) 
 3. Enter **one code of a codes card** (always the same for the same account and the same user). 
 4. Enter the **master password**.
 
-<img src="./icons/padlock-unlock.png" width="128" alt="Unlock">
+<img src="./icons/padlock-unlock.png" width="96" alt="Unlock">
 
 * After entering the data, PMG **will generate a unique password** for that account, that user, that code of the codes card and that master password. 
 * PMG doesn't save any data and **all is generated locally** (using JavaScript in the browser)
