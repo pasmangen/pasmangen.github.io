@@ -9,14 +9,14 @@ The easy way to generate your passwords.
 
 # The problem
 
-<table>
+<table width="100%">
     <tr>
-        <td>Comunity Managers:</td>
-        <td>Sys Admins:</td>
+        <td align="center">Comunity Managers:</td>
+        <td align="center">Sys Admins:</td>
     </tr>
     <tr>
-        <td><img src="./icons/comunity-managers.png" width="256" alt="Comunity Managers"></td>
-        <td><img src="./icons/sysadmins.png" width="256" alt="Sys Admins"></td>
+        <td align="center"><img src="./icons/comunity-managers.png" width="256" alt="Comunity Managers"></td>
+        <td align="center"><img src="./icons/sysadmins.png" width="256" alt="Sys Admins"></td>
     </tr>
 </table>
 
@@ -36,41 +36,70 @@ Use different passwords for each of our accounts.
 
 # Save passwords in a CVS file
 
-<img src="./icons/excel-3-512.png" width="128" alt="CVS File">
-
-It is the easiest way to save all our passwords.
-
-**PROBLEM: If someone gets our CVS file, could login in all our accounts.**
+<table>
+    <tr>
+        <td><img src="./icons/excel-3-512.png" width="128" alt="CVS File"></td>
+        <td>
+            <p>It is the easiest way to save all our passwords.</p>
+            <p><strong>PROBLEM: If someone gets our CVS file, could login in all our accounts.<strong></p>
+        </td>
+    </tr>
+</table>
 
 # Save passwords in a encrypted database
 
-<img src="./icons/data-encryption-512.png" width="128" alt="Encrypted Database">
-
-Now, if someone gets our encrypted database, must also get the password of the database to crack our other passwords.
-
-**PROBLEM: Where to store the encrypted database? In localhost? In the cloud?**
+<table>
+    <tr>
+        <td><img src="./icons/data-encryption-512.png" width="128" alt="Encrypted Database"></td>
+        <td>
+            <p>Now, if someone gets our encrypted database, must also get the password of the database to crack our other passwords.</p>
+            <p><strong>PROBLEM: Where to store the encrypted database? In localhost? In the cloud?</strong></p>
+        </td>
+    </tr>
+</table>
 
 # The ultimate solution: PMG
 
-<img src="./img/icon-pmg-bis.png" width="256" alt="PMG - Password Manager Generator">
-
-PMG is a **Password Manager Generator**: 
-* You don't have to save any passwords. They are generated from the account name, the user name, a coordinate of one codes card and a master password. 
-* Now, **you just have to memorize a master password**, and kepp save a semi-random codes card (you can print it and carry in your wallet)
+<table>
+    <tr>
+        <td><img src="./img/icon-pmg-bis.png" width="256" alt="PMG - Password Manager Generator"></td>
+        <td>
+            PMG is a <strong>Password Manager Generator</strong>:
+            <ul>
+                <li>You don't have to save any passwords. They are generated from the account name, the user name, 
+                    a coordinate of one codes card and a master password.</li>
+                <li>Now, <strong>you just have to memorize a master password</strong>, and kepp save
+                    a semi-random codes card (you can print it and carry in your wallet).</li>
+            </ul>
+        </td>
+    </tr>
+</table>
 
 # How PMG works?
 
-<img src="./icons/padlock.png" width="96" alt="Lock">
-
-1. Enter the **account name** (eg: Twitter) 
-2. Enter the **username** (eg: hackthonlovers) 
-3. Enter **one code of a codes card** (always the same for the same account and the same user). 
-4. Enter the **master password**.
-
-<img src="./icons/padlock-unlock.png" width="96" alt="Unlock">
-
-* After entering the data, PMG **will generate a unique password** for that account, that user, that code of the codes card and that master password. 
-* PMG doesn't save any data and **all is generated locally** (using JavaScript in the browser)
+<table>
+    <tr>
+        <td><img src="./icons/padlock.png" width="96" alt="Lock"></td>
+        <td>
+            <ol>
+                <li>Enter the <strong>account name</strong> (eg: Twitter).</li>
+                <li>Enter the <strong>username</strong> (eg: hackthonlovers).</li>
+                <li>Enter <strong>one code of a codes card</strong> (always the same for the same account and the same user).</li>
+                <li>Enter the <strong>master password</strong>.</li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td><img src="./icons/padlock-unlock.png" width="96" alt="Unlock"></td>
+        <td>
+            <ul>
+                <li>After entering the data, PMG <strong>will generate a unique password</strong> for that account, 
+                    that user, that code of the codes card and that master password.</li>
+                <li>PMG doesn't save any data and <strong>all is generated locally</strong> (using JavaScript in the browser).</li>
+            </ul>
+        </td>
+    </tr>
+</table>
 
 # Advantages of PMG
 
