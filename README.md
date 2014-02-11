@@ -38,7 +38,7 @@ Use different passwords for each of our accounts.
 
 <table>
     <tr>
-        <td><img src="./icons/excel-3-512.png" width="128" alt="CVS File"></td>
+        <td width="128"><img src="./icons/excel-3-512.png" width="128" alt="CVS File"></td>
         <td>
             <p>It is the easiest way to save all our passwords.</p>
             <p><strong>PROBLEM: If someone gets our CVS file, could login in all our accounts.<strong></p>
@@ -50,7 +50,7 @@ Use different passwords for each of our accounts.
 
 <table>
     <tr>
-        <td><img src="./icons/data-encryption-512.png" width="128" alt="Encrypted Database"></td>
+        <td width="128"><img src="./icons/data-encryption-512.png" width="128" alt="Encrypted Database"></td>
         <td>
             <p>Now, if someone gets our encrypted database, must also get the password of the database to crack our other passwords.</p>
             <p><strong>PROBLEM: Where to store the encrypted database? In localhost? In the cloud?</strong></p>
