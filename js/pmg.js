@@ -41,7 +41,7 @@ var sumCharCode = function(str) {
 
 var addAccount = function(account) {
     
-    if ( $.inArray(account, accounts) ) {
+    if ( $.inArray(account, accounts) === -1 ) {
         accounts.push(account);
         accounts.sort();
     }
@@ -50,7 +50,7 @@ var addAccount = function(account) {
 
 var addUser = function(user) {
     
-    if ( $.inArray(user, users) ) {
+    if ( $.inArray(user, users) === -1 ) {
         users.push(user);
         users.sort();
     }
