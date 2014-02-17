@@ -65,7 +65,7 @@ nav a{color:#eaeaea;font-size:.9em;text-decoration:none}
 .main fieldset input[type='text']:focus,.main fieldset input[type='password']:focus{border:1px solid #ffa500;color:#333;outline:0}
 .main fieldset .btn{background:#00a352;border:0;border-bottom:4px solid #008534;border-radius:5px;color:#eaeaea;display:inline-block;padding:.75em;text-decoration:none;width:250px;}
 .main fieldset .btn span{margin:0 .7em}
-.main fieldset #genpass{background:#baf2d6;color:#9cd4b8;border:1px solid #9cd4b8;border-radius:5px;padding:.5em}
+.main fieldset #genpass{background:#baf2d6;color:#baf2d6;border:1px solid #9cd4b8;border-radius:5px;padding:.5em}
 #viewCodesCard table{border-collapse:separate !important;border:1px solid #00a352;border-radius:5px;margin:2em auto;}
 #viewCodesCard table th{background:#00a352;color:#eaeaea;border-top-left-radius:4px;border-top-right-radius:4px}
 #viewCodesCard table tr:nth-child(odd){background:#ddd}
