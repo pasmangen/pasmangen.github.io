@@ -5,7 +5,7 @@ PMG - Password Manager Generator
 
 <iframe src="http://www.slideshare.net/slideshow/embed_code/31054958" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/asanzdiego/pmg-passwordmanagergeneratoren" title="PMG - Password Manager Generator [EN]" target="_blank">PMG - Password Manager Generator [Slides]</a> </div>
 
-[Download v1.1](https://github.com/pasmangen/pasmangen.github.io/archive/pmg-1.1.zip)
+[Download v1.2](https://github.com/pasmangen/pasmangen.github.io/archive/1.2.zip)
 
 ## The problem
 
