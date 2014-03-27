@@ -50,6 +50,8 @@ body{background:#fafafa;font-family:'Open Sans';font-size:16px}
 header{background:url("http://techchurian.files.wordpress.com/2013/07/hackers_security_password-100004008-orig1.jpg") #333;background-size:cover;border-bottom:3px solid #00a352;color:#eaeaea;padding:.5em;text-align:center;}
 header h1{margin:0;padding:0}
 header h2{font-style:italic;font-size:1.1em}
+header a{color:#fff;text-decoration:none;}
+header a:hover{color:#777}
 footer{color:#aaa;font-size:.8em;text-align:center;}
 footer a{color:#aaa;text-decoration:none;}
 footer a:hover{color:#777}
@@ -66,6 +68,7 @@ nav a{color:#eaeaea;font-size:.9em;text-decoration:none}
 .main fieldset .btn{background:#00a352;border:0;border-bottom:4px solid #008534;border-radius:5px;color:#eaeaea;display:inline-block;padding:.75em;text-decoration:none;width:250px;}
 .main fieldset .btn span{margin:0 .7em}
 .main fieldset #genpass{background:#baf2d6;color:#baf2d6;border:1px solid #9cd4b8;border-radius:5px;padding:.5em}
+.doc{text-align:left}
 #viewCodesCard table{border-collapse:separate !important;border:1px solid #00a352;border-radius:5px;margin:2em auto;}
 #viewCodesCard table th{background:#00a352;color:#eaeaea;border-top-left-radius:4px;border-top-right-radius:4px}
 #viewCodesCard table tr:nth-child(odd){background:#ddd}

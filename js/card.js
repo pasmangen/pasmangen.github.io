@@ -8,9 +8,9 @@ var getHash = function() {
     var schoolName      = normalizeText( $('#schoolName').val() );
     var cardName        = normalizeText( $('#cardName').val() );
     
-    var data1   = birthplace+childhoodFriend+schoolName+cardName;
-    var data2   = schoolName+cardName+birthplace+childhoodFriend;
-    var hash    = hashWrapper(data1)+hashWrapper(data2);
+    var data1   = birthplace + childhoodFriend + schoolName + cardName;
+    var data2   = schoolName + cardName + birthplace + childhoodFriend;
+    var hash    = hashWrapper(data1) + hashWrapper(data2);
     
     return hash;
 };

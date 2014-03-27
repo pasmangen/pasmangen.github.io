@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <title>PMG - Un gestor de contraseñas generadas</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Password Manager Generator">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="../img/pmg-logo.png" />
+    <link rel="stylesheet" href="../css/style.css"/>
+    
+    <script src='../lib/modernizr/modernizr-2.7.1.min.js'></script>
+</head>
+<body>
+<!--[if lt IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+    <header class="hiddenWithCodesCard">
+        <h1><a href="http://pasmangen.github.io/">PMG<br/>Un gestor de contraseñas generadas</a></h1>
+        <h2>La forma más fácil de gestionar tus contraseñas</h2>
+    </header>
+    <nav>
+        <a href="../index.html">Genera tu contraseña</a>
+    </nav>
+
+    <section class="main doc">
+    
+        <h1>PMG - Un gestor de contraseñas generadas</h1>
+
+        <p>Si sumamos <a href="http://www.elladodelmal.com/2014/03/mas-de-161-millones-de-identidades.html">los datos
+        de los distintos sitios de renombre cuyas identidades han sido expuestas obtenemos más de 161 millones</a>.
+        Es un número alarmante, pero <a href="http://www.elladodelmal.com/2010/10/reutilizacion-de-contrasenas.html">si
+        no utilizas la misma contraseña en distintos sitios</a>, y además <a href="https://latch.elevenpaths.com/">utilizas
+        Latch para controlar el acceso a tu cuenta</a>, puedes empezar a dormir tranquilo.</p>
+
+        <p>Latch se está empezando utilizar cada vez en más sitios, y para generar contraseñas robustas existen varios métodos.
+        Podemos usar por ejemplo
+        <a href="http://www.elladodelmal.com/2011/11/generacion-de-contrasenas-robustas-para.html">el método "deThi4-go"</a>.
+        También podemos utilizar <a href="http://keepass.info/">bases de datos cifradas como KeepPass</a>. O también podemos
+        utilizar <a href="http://pasmangen.github.io/">PMG, otro método para generar contraseñas robustas</a>, cuyas características,
+        funcionamiento y manejo vamos a explicar a continuación.</p>
+
+        <h2>¿Cómo funciona PMG?</h2>
+
+        <p>El funcionamiento de PMG consite en utilizar el nombre de tu cuenta, un código de seguridad y una contraseña maestra
+        para generar un hash que utilizaremos como contraseña de dicha cuenta. Puede que así dicho, no se entienda muy bien,
+        pero manejando la aplicación es como mejor se comprende, así que expliquemos como se usa.</p>
+        
+        <h2>¿Cómo se usa PMG?</h2>
+        
+        <p>El uso de PMG es bastante sencillo. En la primera pantalla nos pide que introduzcamos el
+        <strong>nombre de la cuenta</strong> (por ejemplo: twitter, gmail, etc.) y el <strong>nombre del usuario</strong>
+        (por ejemplo: chemaalonso, hackathonlovers, etc.). Esto se pensó así para los que tienen distintos usuarios
+        en un mismo servicio.</p>
+
+        <figure>
+            <img src="./img/pmg-02-cuenta-y-usuario.png"
+                 alt="Página de inicio donde se introduce el nombre de la cuenta y el nombre del usuario" />
+            <figcaption>Figura 1: Página de inicio donde se introduce el nombre de la cuenta y el nombre del usuario</figcaption>
+        </figure>
+
+        <p>Los datos de nombre de la cuenta y nombre de usuario se guardan en el <strong>Local Storage del Navegador</strong>,
+        para que en futuras utilizaciones nos aparezca un <strong>menú de autocompletar</strong>, para escribir menos
+        y poder ir más rápidos.</p>
+
+        <p>Una vez rellenos los datos, pinchamos en el botón de "<strong>Calculate Coordinate</strong>", y entonces
+        nos aparece otra pantalla donde tenemos que introducir un <strong>código de una tarjeta de coordenadas</strong>
+        y una <strong>contraseña maestra</strong>.</p>
+
+        <figure>
+            <img src="./img/pmg-05-codigo-y-password.png"
+                 alt="Segundo paso donde se introduce un código de una tarjeta de coordenadas y una contraseña maestra" />
+            <figcaption>Figura 2: Segundo paso donde se introduce un código de una tarjeta de coordenadas
+            y una contraseña maestra</figcaption>
+        </figure>
+
+        <p>La coordenada que se nos pide (en este caso la coordenada 39) va a ser siempre la misma para la tupla nombre de cuenta
+        y nombre de usuario. De hecho se calcula normalizando los textos, sumando el valor numérico de cada carácter y calculando
+        el módulo del número de coordenadas de la tarjeta, como puede apreciarse en la siguiente muestra de código:</p>
+
+        <figure>
+            <pre><code>var account     = normalizeText( $('#account').val() );
+var user        = normalizeText( $('#user').val() );
+var data        = account + user;
+var dataCode    = sumCharCode( data );
+var coordenate  = dataCode % CODES_CARD_CELLS;</code></pre>
+            <figcaption>Figura 3: Código para extraer la coordenada a partir del nombre de la cuenta y del nombre del usuario</figcaption>
+        </figure>
+
+        <p>El código de la tarjeta de coordenadas no es obligatorio ponerlo, aunque sí aconsejable para incrementar
+        la seguridad. Un poco más abajo explicaremos cómo <a href="#crear-tarjeta-coordenadas">crear nuestra propia
+        tarjeta de coordenadas</a>.</p>
+
+        <p>Tanto el <strong>código de tu tarjeta de coordenadas</strong> como tu <strong>contraseña maestra</strong>,
+        se pueden introducir mediante un teclado virtual para evitar posibles keyloggers e incrementar aún más la seguridad.
+        Una vez introducidos se mostrará la contraseña generada. Está última no se ve a simple vista, hay que seleccionarla
+        para poder visualizarla y poder copiarla.</p>
+
+        <figure>
+            <img src="./img/pmg-07-copiar-password.png"
+                 alt="Último paso donde se selecciona y se copia la contraseña generada" />
+            <figcaption>Figura 4: Último paso donde se selecciona y se copia la contraseña generada</figcaption>
+        </figure>
+
+        <p>La contraseña generada va a ser siempre la misma para el conjunto de: nombre de cuenta, nombre de usuario,
+        código de la tarjeta de coordenadas y contraseña maestra; pues es el hash del conjunto de datos. Se puede
+        apreciar en la siguiente muestra de código:</p>
+
+        <figure>
+            <pre><code>var account             = $('#account').val();
+var user                = $('#user').val();
+var password            = $('#password').val();
+var code                = $('#code').val();
+var data                = normalizeText( account + user ) + code + password;
+var hash                = hashWrapper( data );
+var generatedPassword   = hash.substr( 0, GENERATED_PASSWORD_LENGTH );</code></pre>
+            <figcaption>Figura 5: Código para generar la contraseña</figcaption>
+        </figure>
+
+        <h2><a name="crear-tarjeta-coordenadas">¿Cómo crear tu propia tarjeta de coordenadas?</a></h2>
+
+        <p>Como hemos dicho antes, aunque no es obligatorio, para incrementar la seguridad, PMG nos pide un código
+        de una tarjeta de coordenadas. Si queremos usar esta característica, debemos de tener una <strong>tarjeta
+        de coordenadas</strong> antes de empezar a usar PMG. Afortunadamente PMG te permite obtener la tuya propia.
+        Para ello pinchamos en "<strong>Generate Your Codes Card</strong>" y nos muestra una pantalla en donde tendremos
+        que rellenar ciertos datos.</p>
+
+        <figure>
+            <img src="./img/pmg-09-semillas-tarjeta.png"
+                 alt="Datos para generar tu tarjeta de coordenadas" />
+            <figcaption>Figura 6: Datos para generar tu tarjeta de coordenadas</figcaption>
+        </figure>
+
+        <p>Estos datos son: tu <strong>lugar de nacimiento</strong>, el <strong>nombre de tu mejor amigo de la infancia</strong>,
+        el <strong>nombre de colegio de primaria</strong>. Como estos datos se pueden obtener mediante
+        <a href="http://www.elladodelmal.com/2013/06/un-pequeno-juego-de-ingenieria-social.html">ingeniería social</a>,
+        se ha añadido un campo más que es el <strong>nombre de tu tarjeta de coordenadas</strong>, que debería ser
+        totalmente secreto. Una vez rellenados los campos, si pinchamos en el botón "Generate Codes Card" y obtendremos
+        una tarjeta de coordenadas como la siguiente, que podremos imprimir:</p>
+
+        <figure>
+            <img src="./img/pmg-10-tarjeta-de-coordenadas.png"
+                 alt="Tarjeta de coordenadas generada" />
+            <figcaption>Figura 6: Tarjeta de coordenadas generada</figcaption>
+        </figure>
+
+        <p>Para los mismos datos introducidos, obtendremos siempre la misma tarjeta de coordenadas, puesto que nos muestra 
+        nada más y nada menos que un hash de dichos datos, como puede apreciarse en la siguiente muestra de código:</p>
+
+        <figure>
+            <pre><code>var birthplace      = normalizeText( $('#birthplace').val() );
+var childhoodFriend = normalizeText( $('#childhoodFriend').val() );
+var schoolName      = normalizeText( $('#schoolName').val() );
+var cardName        = normalizeText( $('#cardName').val() );
+
+var data1   = birthplace + childhoodFriend + schoolName + cardName;
+var data2   = schoolName + cardName + birthplace + childhoodFriend;
+var hash    = hashWrapper(data1) + hashWrapper(data2);</code></pre>
+            <figcaption>Figura 7: Código para generar la tarjeta de coordenadas</figcaption>
+        </figure>
+
+        <h2>Características de PMG</h2>
+        
+        <ul>
+            <li>PMG genera contraseñas robustas y diferentes para cada una de tus cuentas.</li>
+            <li>PMG sólo te obliga a recordar una contraseña maestra.</li>
+            <li>PMG permite incrementar la seguridad mediante el uso de una tarjeta de coordenadas.</li>
+            <li>PMG no guarda ningún dato en la nube, todo es generado en local.</li>
+            <li>PMG está totalmente desarrollado en HTML, CSS y JavaScript.</li>
+            <li>PMG se puede usar tanto en el PC como en el móvil, sólo te hace falta un navegador.</li>
+            <li>PMG tiene una licencia de Softwre Libre permisiva.</li>
+        </ul>
+        
+        <h2>¿Cómo nació PMG?</h2>
+    
+        <p>Como buenos <a href="http://www.meetup.com/Hackathon-Lovers/">amantes de los hackathones</a>, 
+        Carlos Azaustre (<a href="http://twitter.com/carlosazaustre">@carlosazaustre</a>), 
+        Jorge Arévalo (<a href="http://twitter.com/jorgeas80">@jorgeas80</a>) y
+        Adolfo Sanz De Diego (<a href="http://twitter.com/carlosazaustre">@asanzdiego</a>)
+        desarrollaron PMG durante el <a href="http://techfest.uc3m.es/concursos/hackathon/">I Hackathon del t3chfest</a></p>
+    </section>
+
+    <footer class="hiddenWithCodesCard">
+        <p> <a href="http://www.slideshare.net/asanzdiego/pmg-passwordmanagergeneratores">¿Qué es PMG?</a>
+          | <a href="http://github.com/pasmangen/pasmangen.github.io">Forkeame en GitHub</a>
+          | &copy; 2014 - Hackalovers Team</p>
+    </footer>
+
+    <!--script src='//localhost:35729/livereload.js'></script-->
+    <script src="./lib/jquery/jquery-2.1.0.min.js"></script>
+</body>
+</html>
