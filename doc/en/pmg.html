@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <title>PMG - A generator password manager</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Password Manager Generator">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="../../img/pmg-logo.png" />
+    <link rel="stylesheet" href="../../css/style.css"/>
+    
+    <script src='../lib/modernizr/modernizr-2.7.1.min.js'></script>
+    
+    <style>img{max-width: 100%}</style>
+</head>
+<body>
+<!--[if lt IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+    <header class="hiddenWithCodesCard">
+        <h1><a href="http://pasmangen.github.io/">PMG<br/>A generator password manager</a></h1>
+        <h2>The easiest way to manage your passwords</h2>
+    </header>
+    <nav>
+        <a href="../../index.html">Create your password</a>
+    </nav>
+
+    <section class="main doc">
+    
+        <h1>PMG - A generator password manager</h1>
+
+        <p>If we add
+        <a href="http://www.elladodelmal.com/2014/03/mas-de-161-millones-de-identidades.html">
+        data from various reputable sites whose identities have been exposed obtain more than 161 million</a>.
+        It is an alarming number, so
+        <a href="http://www.elladodelmal.com/2010/10/reutilizacion-de-contrasenas.html">use
+        the same password on different sites</a> is not a good idea.</p>
+
+        <p>To generate strong passwords there are several methods. We can use for example
+        <a href="http://www.elladodelmal.com/2011/11/generacion-de-contrasenas-robustas-para.html">
+        the "deThi4-go" method</a>. We may also use <a href="http://keepass.info/">encrypted
+        databases as KeepPass</a>. Or we can also use
+        <a href="http://pasmangen.github.io/">PMG, another method for generating strong passwords</a>.
+        Now we will explain belown its characteristics, how it works, and how to use it.</p>
+
+        <h2>How PMG works?</h2>
+
+        <p>PMG use the name of your account, a security code and a master password <strong>to generate
+        a hash to use as the password</strong> for this account. May be this is not understood very well,
+        but using the application is best way to understand how PMG works.
+                
+        <h2>How to use PMG?</h2>
+        
+        <p>PMG is quite simple. The first screen asks you to enter the <strong>account name</strong>
+        (for example: twitter, gmail, etc.) and the <strong>user name</strong> (for example: chemaalonso, 
+        hackathonlovers, etc.). So you can have differents users on the same service.</p>
+
+        <figure>
+            <img src="./img/pmg-02-cuenta-y-usuario.png"
+                 alt="Homepage where you have to enter the account name and the user name" />
+            <figcaption>Figure 1: Homepage where you have to enter the account name and the user name</figcaption>
+        </figure>
+
+        <p>The account name and the user name are stored in the <strong>Navigator Local Storage</strong>,
+        so in the future an <strong>autocomplete menu appears</strong> with the data and we have to write less and we can go faster.</p>
+
+        <p>After filling the data, we click on the <strong>"Calculate Coordinate"</strong> button
+        and then we have another screen where you have to enter a <strong>code from a codes card</strong>
+        and a <strong>master password</strong>.</p>
+
+        <figure>
+            <img src="./img/pmg-05-codigo-y-password.png"
+                 alt="Second step where you have to enter a code from a codes card and a master password" />
+            <figcaption>Figure 2: Second step where you have to enter a code from a codes card and a master password</figcaption>
+        </figure>
+
+        <p>The coordinate (in this case the coordinate 39) will always be the same for
+        the tuple account name and user name. Indeed the coordinate is calculated normalizing the text,
+        adding the numerical value of each character and dividing by the number of coordinates of the card,
+        as shown in the following sample code:</p>
+
+        <figure>
+            <pre><code>var account     = normalizeText( $('#account').val() );
+var user        = normalizeText( $('#user').val() );
+var data        = account + user;
+var dataCode    = sumCharCode( data );
+var coordenate  = dataCode % CODES_CARD_CELLS;</code></pre>
+            <figcaption>Figure 3: Code to extract coordinate from the account name and user name</figcaption>
+        </figure>
+
+        <p>The code of the codes card is not required to put it, although it advisable to increase security.
+        A little below explain <a href="#crear-tarjeta-coordenadas">how to create our own codes card</a>.</p>
+
+        <p>Both, <strong>the code from your codes card</strong> and <strong>your master password</strong>
+        can be entered using a virtual keyboard to avoid keyloggers and further increase security.</p>
+        
+        <p>After entering all the data, the generated password is displayed. We can't see it at first,
+        so you have to select it to view and to copy it.</p>
+
+        <figure>
+            <img src="./img/pmg-07-copiar-password.png"
+                 alt="Last step where you select and copy the generated password" />
+            <figcaption>Figure 4: Last step where you select and copy the generated password</figcaption>
+        </figure>
+
+        <p>The generated password will always be the same for the same:
+        account name, user name, code of the codes card and master password. It is the hash of the data set.
+        It can be seen in the following sample code:</p>
+
+        <figure>
+            <pre><code>var account             = $('#account').val();
+var user                = $('#user').val();
+var password            = $('#password').val();
+var code                = $('#code').val();
+var data                = normalizeText( account + user ) + code + password;
+var hash                = hashWrapper( data );
+var generatedPassword   = hash.substr( 0, GENERATED_PASSWORD_LENGTH );</code></pre>
+            <figcaption>Figura 5: Code to generate the password</figcaption>
+        </figure>
+
+        <h2><a name="crear-tarjeta-coordenadas">How to create your own codes card?</a></h2>
+
+        <p>As we said before, although not mandatory, to increase security, PMG ask us a code from a codes card.
+        If we want to use this feature, we must to have a <strong>codes card</strong> before starting using PMG.
+        Fortunately PMG lets you create your own. To do this we click on <strong>"Generate Your Card Codes"</strong>
+        and shows a screen where we have to fill some data.</p>
+
+        <figure>
+            <img src="./img/pmg-09-semillas-tarjeta.png"
+                 alt="Data to generate your codes card" />
+            <figcaption>Figure 6: Data to generate your codes card</figcaption>
+        </figure>
+
+        <p>These data include: your <strong>place of birth</strong>, 
+        the <strong>name of your best childhood friend</strong>, the <strong>name of your primary school</strong>.
+        All these date can be obtained through
+        <a href="http://www.elladodelmal.com/2013/06/un-pequeno-juego-de-ingenieria-social.html">social engineering</a>,
+        so we have to introduce also one more field that is the <strong>name of your codes card</strong>,
+        which should be completely secret. Once the fields are filled, if we click on the
+        <strong>"Generate Codes Card"</strong> button and get a codes card like this, that we can print:</p>
+
+        <figure>
+            <img src="./img/pmg-10-tarjeta-de-coordenadas.png"
+                 alt="Generated codes card" />
+            <figcaption>Figure 6: Generated codes card</figcaption>
+        </figure>
+
+        <p>For the same input data, we always obtain the same codes card, because it's the hash of the data,
+        as can be seen in the following code sample:</p>
+
+        <figure>
+            <pre><code>var birthplace      = normalizeText( $('#birthplace').val() );
+var childhoodFriend = normalizeText( $('#childhoodFriend').val() );
+var schoolName      = normalizeText( $('#schoolName').val() );
+var cardName        = normalizeText( $('#cardName').val() );
+
+var data1   = birthplace + childhoodFriend + schoolName + cardName;
+var data2   = schoolName + cardName + birthplace + childhoodFriend;
+var hash    = hashWrapper(data1) + hashWrapper(data2);</code></pre>
+            <figcaption>Figure 7: Code to generate the codes card</figcaption>
+        </figure>
+
+        <h2>PMG features</h2>
+        
+        <ul>
+            <li>PMG generates <strong>robust and different passwords</strong> for each of your accounts.</li>
+            <li>PMG only forces you to remember <strong>one master password</strong>.</li>
+            <li>PMG can increase your security by <strong>using a codes card</strong>.</li>
+            <li>PMG does not store any data in the cloud, <strong>everything is generated locally</strong>.</li>
+            <li>PMG is fully developed in <strong>HTML, CSS and JavaScript</strong>.</li>
+            <li>PMG can be used on both PC and mobile, <strong> all you need is a browser</strong>.</li>
+            <li>PMG has a <strong>free software license</strong>.</li>
+        </ul>
+        
+        <h2>How was PMG born?</h2>
+    
+        <p>As good <a href="http://hackathonlovers.com">hackathon lovers</a>, 
+        Carlos Azaustre (<a href="http://twitter.com/carlosazaustre">@carlosazaustre</a>), 
+        Jorge Arévalo (<a href="http://twitter.com/jorgeas80">@jorgeas80</a>) and
+        Adolfo Sanz De Diego (<a href="http://twitter.com/carlosazaustre">@asanzdiego</a>)
+        developed PMG during <a href="http://techfest.uc3m.es/concursos/hackathon/">the first t3chfest hackathon</a></p>
+    </section>
+
+    <footer class="hiddenWithCodesCard">
+        <p> <a href="http://pasmangen.github.io/doc/en/pmg.html">What is PMG?</a>
+          | <a href="http://github.com/pasmangen/pasmangen.github.io">Forkeame en GitHub</a>
+          | &copy; 2014 - Hackalovers Team</p>
+    </footer>
+
+    <!--script src='//localhost:35729/livereload.js'></script-->
+    <script src="./lib/jquery/jquery-2.1.0.min.js"></script>
+    
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-49507593-1', 'pasmangen.github.io');
+      ga('send', 'pageview');
+
+    </script>
+</body>
+</html>
