@@ -113,10 +113,26 @@ $(function() {
     $('#coordenates').on('click', calculateCoordenates);
     $('#generate').on('click', generatePassword);
     $('#account').autocomplete({
-      source: accounts
+        source: accounts
     });
     $('#user').autocomplete({
-      source: users
+        source: users
     });
     //updateCopyButton();
+
+    var clipboard = new Clipboard('#copy-button');
+
+    clipboard.on('success', function(e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        e.clearSelection();
+        alert("Password copied to the clipboard");
+    });
+
+    clipboard.on('error', function(e) {
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        alert("Error coping the password to the clipboard");
+    });
 });
